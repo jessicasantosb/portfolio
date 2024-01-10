@@ -1,0 +1,22 @@
+/* dark theme */
+.language-btn {
+    background-color: var(--primary-dark);
+    color: var(--title-dark);
+    border: none;
+    margin-top: 10px;
+    padding: 3px;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+.language-btn.isActive {
+    color: var(--orange-color);
+}
+
+/* light theme */
+.light-theme .language-btn {
+    background-color: var(--primary-light);
+    color: var(--title-light);
+}
+.light-theme .language-btn.isActive {
+    color: var(--orange-color);
+}

@@ -1,0 +1,79 @@
+.project-item {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  /* margin: 10px; */
+  text-align: center;
+  border: 1px solid var(--orange-color);
+}
+.project-item-title {
+  color: var(--title-dark);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 1.15rem;
+  padding-bottom: 20px;
+}
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.tag.html {
+  border-color: #ff550a;
+  color: #ff550a;
+}
+.tag.css {
+  border-color: #4a67de;
+  color: #4a67de;
+}
+.tag.javascript {
+  border-bottom: #ffde53;
+  color: #807b00;
+}
+.tag.git {
+  border-bottom: #6c6c6c;
+  color: #6c6c6c;
+}
+.tag.react {
+  border-bottom: #1b37a9;
+  color: #1b37a9;
+}
+.tag.frontend {
+  border-bottom: #e13242;
+  color: #e13242;
+}
+.tag.backend {
+  border-bottom: #e13242;
+  color: #e13242;
+}
+.tag.nodejs {
+  border-bottom: #215732;
+  color: #215732;
+}
+.tag.mongodb {
+  border-bottom: #4db33d;
+  color: #4db33d;
+}
+.project-link-div {
+  padding-top: 20px;
+}
+.project-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  padding-left: 10px;
+}
+.project-link-div:hover {
+  color: var(--orange-color);
+}
+
+/* light theme */
+.light-theme .project-item-title {
+  color: var(--title-light);
+}
+.light-theme .project-link {
+  color: var(--text-light);
+}

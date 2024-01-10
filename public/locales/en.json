@@ -1,0 +1,35 @@
+
+    {
+      "buttonTelegram": "Say hi",
+      "buttonCurriculum": "Curriculum",
+    
+      "homeTitleGretting": "Hello!",
+      "homeTitle": "I'm Jessica Bandeira",
+      "homeSubtitle": "I'm a Frontend Developer based in Brazil",
+      "homeScrool": "Scrool Down ",
+   
+      "aboutTitle": "about me",
+      "aboutSubtitle": "Here you will find more information about me, what I do, and my current skills",
+      "aboutText": "I am a 25-year-old self-taught web developer focused on improving my front-end skills. I actively immerse myself in a plethora of online resources and delve into technologies such as HTML, CSS and JavaScript on platforms such as YouTube and Udemy. My native language is Portuguese, but I have a good command of English, especially reading, which gives me access to content and resources in one of the most spoken languages in the tech world.",
+   
+      "contactTitle": "contact",
+      "contactSubtitle": "Feel free to contact me, I will get back to you as soon as possible",
+      "contactText": "Message me",
+   
+      "pageSection1": "Home",
+      "pageSection2": "About",
+      "pageSection3": "Project",
+      "pageSection4": "Contact",
+   
+      "projectsTitle": "portfolio",
+      "projectsSubtitle": "Here, you'll find some of the personal projects I've created. Each of them details the technologies used and provides the repository link",
+   
+      "projectItemTitle1": "Calculator",
+      "projectItemTitle2": "Sign-in page",
+      "projectItemTitle3": "Weather app",
+      "projectItemTitle4": "Readme.Books",
+      "projectItemTitle5": "To do list",
+      "projectItemLink": "Repository"
+    }
+  
+  

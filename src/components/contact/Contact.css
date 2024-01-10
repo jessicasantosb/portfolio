@@ -1,0 +1,58 @@
+/* dark theme */
+#contact {
+    padding: 80px 0;
+}
+.contact-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 40px;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.contact-icon {
+    color: var(--text-dark);
+    opacity: 0.6;
+    padding-bottom: 20px;    
+}
+.contact-card-title {
+    font-size: 1.25rem;
+    color: var(--title-dark);
+
+}
+.contact-card-data {
+    font-size: 0.75rem;
+    color: var(--text-dark);
+}
+.contact-card-link {
+    text-decoration: none;
+    color: var(--orange-color);
+    padding: 20px 0 10px 0;
+}
+.contact-card-link:hover {
+    color: var(--title-dark);
+}
+
+/* light theme */
+.light-theme .contact-icon {
+    color: var(--text-light);
+    opacity: 0.6;
+    padding-bottom: 20px;    
+}
+.light-theme .contact-card-title {
+    font-size: 1.25rem;
+    color: var(--title-light);
+
+}
+.light-theme .contact-card-data {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+.light-theme .contact-card-link:hover {
+    color: var(--title-light);
+}

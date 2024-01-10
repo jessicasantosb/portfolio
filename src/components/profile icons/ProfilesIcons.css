@@ -1,0 +1,21 @@
+/* dark theme */
+#profile-icons a {
+  color: var(--title-dark);
+}
+.github-icon:hover {
+  color: var(--github-color);
+}
+.linkedin-icon:hover {
+  color: var(--linkedin-color);
+}
+.discord-icon:hover {
+  color: var(--discord-color);
+}
+.twitter-icon:hover {
+  color: var(--twitter-color);
+}
+
+/* light theme */
+.light-theme #profile-icons a {
+  color: var(--title-light);
+}

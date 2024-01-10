@@ -1,0 +1,7 @@
+.sun-icon, .moon-icon {
+    padding: 5px;
+    cursor: pointer;
+}
+.sun-icon:hover, .moon-icon:hover {
+    color: var(--orange-color);
+}

@@ -1,0 +1,112 @@
+/* dark theme */
+#header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  background-color: var(--primary-dark);
+  color: var(--title-dark);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+}
+.nav-links {
+  float: right;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links li a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  color: var(--orange-color);
+}
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: var(--orange-color);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before {
+  width: 80%;
+}
+.navbar-icons a i::before {
+  content: "";
+  display: none;
+}
+.progressMainWrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+}
+.progressMainStyle {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(150,150,150,1) 0%, rgba(117,117,117,1) 35%, rgba(65,65,65,1) 100%);
+  width: 15%;
+}
+
+/* light theme */
+.light-theme #header {
+  background-color: var(--primary-light);
+}
+.light-theme .navbar {
+  color: var(--title-light);
+}
+.light-theme .line {
+  background-color: var(--primary-dark);
+}
+.light-theme .nav-links {
+  background-color: var(--primary-light);
+}
+
+@media screen and (max-width: 800px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-light);
+    margin: 5px;
+  }
+  .hamburger {
+    position: fixed;
+    cursor: pointer;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+  }
+  .nav-links {
+    position: fixed;
+    z-index: 3;
+    background-color: var(--primary-dark);
+    height: 40vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 50px 0;
+    clip-path: circle(50px at 90% -60%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1500px at 90% -10%);
+    pointer-events: all;
+  }
+}

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primary-light: #ffffff;
+  --primary-dark: #0d0d0d;
+  --title-light: #414141;
+  --title-dark: #c5c5c5;
+  --text-ligth: #757575;
+  --text-dark: #969696;
+  --orange-color: #e57c23;
+  --github-color: purple;
+  --linkedin-color: #0e76a8;
+  --discord-color: #7289da;
+  --twitter-color: #1da1f2;
+}
+body {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+  font-family: "Poppins", sans-serif;
+  padding: 0 15%;
+}
+.title {
+  color: var(--title-dark);
+  text-align: center;
+  font-size: 3.5rem;
+}
+.subtitle {
+  color: var(--text-dark);
+  text-align: center;
+}
+.title-underline {
+  color: var(--orange-color);
+  font-weight: bold;
+  animation: piscar 1s infinite;
+}
+@keyframes piscar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* light theme */
+body.light-theme {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+.light-theme .title {
+  color: var(--title-light);
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0 10%;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0 5%;
+  }
+}

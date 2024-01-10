@@ -1,0 +1,59 @@
+/* dark theme */
+.btn {
+  cursor: pointer;
+  margin-top: 40px;
+}
+.btn-wrapper {
+  position: relative;
+  border: none;
+  background-color: var(--primary-dark);
+}
+.btn-link {
+  display: block;
+  width: 150px;
+  padding: 8px 0;
+  background: var(--title-light);
+  color: var(--primary-light);
+  text-align: center;
+  text-decoration: none; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  line-height: 50px;
+  border-radius: 15px;
+  transition: all 0.35s;
+}
+.btn-div {
+  padding: 30px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.btn-icon {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: var(--orange-color);
+  transition: all 0.35s;
+}
+.btn-link:hover {
+  border: 3px solid var(--orange-color);
+  background: var(--orange-color);
+  color: var(--primary-light);
+}
+.btn-link:hover + .btn-div {
+  border: 3px solid var(--orange-color);
+  right: -35%;
+}
+
+/* light theme */
+.light-theme .btn-wrapper  {
+  background-color: var(--primary-light);
+}
