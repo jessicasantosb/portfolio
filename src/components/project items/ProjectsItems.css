@@ -1,17 +1,24 @@
 .project-item {
-  position: relative;
+  background-color: var(--secondary-dark);
+  min-height: 250px;
+  width: 100%;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px;
-  border: 1px solid var(--orange-color);
+  padding: 20px;
+}
+.project-item img {
+  border-radius: 10px;
+  width: 300px;
+}
+.project-item div {
+  padding-left: 30px;
 }
 .project-item-title {
   color: var(--title-dark);
   text-transform: uppercase;
   letter-spacing: 8px;
   font-size: 1.15rem;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .tag {
   display: inline-block;
@@ -31,31 +38,31 @@
   color: #4a67de;
 }
 .tag.javascript {
-  border-bottom: #ffde53;
+  border-color: #ffde53;
   color: #807b00;
 }
 .tag.git {
-  border-bottom: #6c6c6c;
+  border-color: #6c6c6c;
   color: #6c6c6c;
 }
 .tag.react {
-  border-bottom: #1b37a9;
+  border-color: #1b37a9;
   color: #1b37a9;
 }
 .tag.frontend {
-  border-bottom: #e13242;
+  border-color: #e13242;
   color: #e13242;
 }
 .tag.backend {
-  border-bottom: #e13242;
+  border-color: #e13242;
   color: #e13242;
 }
 .tag.nodejs {
-  border-bottom: #215732;
+  border-color: #215732;
   color: #215732;
 }
 .tag.mongodb {
-  border-bottom: #4db33d;
+  border-color: #4db33d;
   color: #4db33d;
 }
 .project-link {
@@ -71,9 +78,30 @@
 }
 
 /* light theme */
+.light-theme .project-item {
+  background-color: var(--secondary-light);
+}
 .light-theme .project-item-title {
   color: var(--title-light);
 }
 .light-theme .project-link {
   color: var(--text-light);
+}
+.light-theme .project-link:hover {
+  color: var(--orange-color);
+}
+
+@media screen and (max-width: 1000px) {
+  .project-item {
+    flex-direction: column;
+  }
+  .project-item img {
+    align-self: center;
+  }
+  .project-item div {
+    padding: 30px 0 0 0;
+  }
+  .project-item-title  {
+    text-align: center;
+  }
 }

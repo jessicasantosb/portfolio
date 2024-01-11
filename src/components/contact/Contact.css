@@ -48,6 +48,9 @@
 .light-theme .contact-card-link {
     color: var(--text-light);
 }
+.light-theme .contact-card-link:hover {
+    color: var(--orange-color);
+}
 
 @media screen and (max-width: 1000px) {
     #contact {
