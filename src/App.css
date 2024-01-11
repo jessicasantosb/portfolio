@@ -3,13 +3,18 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 :root {
-  --primary-light: #ffffff;
-  --primary-dark: #0d0d0d;
+  --primary-light: #FBF9F9;
+  --primary-dark: #171717;
+  --secondary-dark: #1f1f1f;
+  --secondary-light: #ECCDB4;
   --title-light: #414141;
-  --title-dark: #c5c5c5;
-  --text-ligth: #757575;
+  --title-dark: #FBF9F9;
+  --subtitle-light: #686767;
+  --subtitle-dark: #808080;
+  --text-ligth: #CFCFC2;
   --text-dark: #969696;
   --orange-color: #e57c23;
   --github-color: purple;
@@ -21,7 +26,6 @@ body {
   background-color: var(--primary-dark);
   color: var(--text-dark);
   font-family: "Poppins", sans-serif;
-  padding: 0 15%;
 }
 .title {
   color: var(--title-dark);
@@ -29,8 +33,9 @@ body {
   font-size: 3.5rem;
 }
 .subtitle {
-  color: var(--text-dark);
+  color: var(--subtitle-dark);
   text-align: center;
+  padding: 20px 0;
 }
 .title-underline {
   color: var(--orange-color);
@@ -57,18 +62,12 @@ body.light-theme {
 .light-theme .title {
   color: var(--title-light);
 }
-
-@media screen and (max-width: 1200px) {
-  body {
-    padding: 0 10%;
-  }
-  .title {
-    font-size: 3rem;
-  }
+.light-theme .subtitle {
+  color: var(--subtitle-light);
 }
 
-@media screen and (max-width: 700px) {
-  body {
-    padding: 0 5%;
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
   }
 }

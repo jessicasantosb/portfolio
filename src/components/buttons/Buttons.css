@@ -2,11 +2,16 @@
 .btn {
   cursor: pointer;
   margin-top: 40px;
+  position: absolute;
 }
 .btn-wrapper {
   position: relative;
+  z-index: 2;
   border: none;
   background-color: var(--primary-dark);
+}
+.btn.btn-curriculum .btn-wrapper {
+  background-color: var(--secondary-dark);
 }
 .btn-link {
   display: block;
@@ -56,4 +61,7 @@
 /* light theme */
 .light-theme .btn-wrapper  {
   background-color: var(--primary-light);
+}
+.light-theme .btn.btn-curriculum .btn-wrapper {
+  background-color: var(--secondary-light);
 }

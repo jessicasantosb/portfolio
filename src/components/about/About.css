@@ -1,6 +1,8 @@
 /* dark theme */
 #about {
-  padding-top: 80px;
+  height: 70vh;
+  padding: 80px 15%;
+  background-color: var(--secondary-dark);
 }
 .about-div {
   display: flex;
@@ -12,9 +14,23 @@
   text-align: justify;
   padding-top: 50px;
 }
+.about-btn-div {
+  position: relative;
+}
 
-@media screen and (max-width: 800px) {
+/* light theme */
+.light-theme #about {
+  background-color: var(--secondary-light);
+}
+
+@media screen and (max-width: 1000px) {
   #about {
-    padding-top: 80px;
+    height: 80vh;
+    padding: 80px 5%;
+  }  
+}
+@media screen and (max-width: 700px) {
+  #about {
+    height: 90vh;
   }  
 }

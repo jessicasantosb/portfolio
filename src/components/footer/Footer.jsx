@@ -4,8 +4,6 @@ import "./Footer.css";
 import ProfilesIcons from "../profile icons/ProfilesIcons";
 
 function Footer() {
-  // const { languageData } = useLanguage();
-
   const { languageData } = useContext(LanguageContext);
 
   return (

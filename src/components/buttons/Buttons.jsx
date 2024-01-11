@@ -3,7 +3,7 @@ import { FaTelegramPlane, FaFileDownload } from "react-icons/fa";
 function Buttons({ name, text }) {
   if (name === "telegram") {
     return (
-      <div className="btn">
+      <div className="btn btn-telegram">
         <button className="btn-wrapper">
           <a
             className="btn-link"
@@ -23,7 +23,7 @@ function Buttons({ name, text }) {
 
   if (name === "curriculum") {
     return (
-      <div className="btn">
+      <div className="btn btn-curriculum">
         {" "}
         <button className="btn-wrapper">
           <a

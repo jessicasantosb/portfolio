@@ -1,4 +1,7 @@
 /* dark theme */
+#footer {
+  padding: 0 15%;
+}
 .footer-links-div {
   display: flex;
   justify-content: space-around;
@@ -36,6 +39,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  #footer {
+    padding: 0 5%;
+  }
   .footer-links-div {
     flex-direction: column;
     justify-content: center;

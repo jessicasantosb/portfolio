@@ -1,11 +1,16 @@
 #projects {
-  padding-top: 80px;
+  padding: 80px 15%;
 }
 .projects-div {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-top: 40px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  #projects {
+    padding: 80px 5%;
+  }  
 }
