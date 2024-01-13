@@ -1,59 +1,85 @@
 /* dark theme */
 #contact {
-    padding: 80px 15%;
-   background-color: var(--secondary-dark);
+  padding: 80px 15%;
+  background-color: var(--secondary-dark);
 }
 .contact-div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
-    margin: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin: 40px;
 }
 .contact-card {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 .contact-icon {
-    color: var(--orange-color);
-    padding-bottom: 20px;    
+  color: var(--orange-color);
+  padding-bottom: 20px;
 }
 .contact-card-title {
-    font-size: 1.25rem;
-    color: var(--title-dark);
-
+  font-size: 1.25rem;
+  color: var(--title-dark);
 }
 .contact-card-data {
-    font-size: 0.75rem;
-    color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-dark);
+  cursor: pointer;
 }
 .contact-card-link {
-    text-decoration: none;
-    color: var(--text-dark);
-    padding: 20px 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--text-dark);
+  padding: 20px 0 10px 0;
 }
 .contact-card-link:hover {
-    color: var(--orange-color);
+  color: var(--orange-color);
+}
+.contact-email-bubble{
+  display: none;
+}
+.contact-email-bubble.show{
+  display: block;
+  position: absolute;
+  background-color: var(--primary-dark);
+  padding: 5px 10px;
+  border-left: 10px solid var(--orange-color);
+  border-radius: 10px;
+  margin-top: 120px;
+  font-size: 0.75rem;
+}
+.contact-email-bubble.show.copied-error {
+  border-color: red; 
 }
 
 /* light theme */
 .light-theme #contact {
-   background-color: var(--secondary-light);
+  background-color: var(--secondary-light);
 }
-.light-theme .contact-card-title, .light-theme .contact-card-data {
-    color: var(--title-light);
+.light-theme .contact-card-title,
+.light-theme .contact-card-data {
+  color: var(--title-light);
 }
 .light-theme .contact-card-link {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 .light-theme .contact-card-link:hover {
-    color: var(--orange-color);
+  color: var(--orange-color);
+}
+.light-theme .contact-email-bubble.show{
+  background-color: var(--primary-light);
 }
 
 @media screen and (max-width: 1000px) {
-    #contact {
-      padding: 80px 5%;
-    }  
+  #contact {
+    padding: 80px 5%;
   }
+}

@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Home.css";
-import { FaCode, FaArrowDown } from "react-icons/fa";
+import { FaCode, FaArrowUp } from "react-icons/fa";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ThemeToggle from "../toggle theme/ThemeToggle";
 import LanguageToggle from "../toggle language/ToggleLanguageBtn";
@@ -9,7 +9,29 @@ import ProfilesIcons from "../profile icons/ProfilesIcons";
 import Button from "../buttons/Buttons";
 
 function Home() {
+  const [isScrollTopVisible, setIsScrollTopVisible] = useState(false)
   const { languageData } = useContext(LanguageContext);
+
+  const btnScrollTopVisible = () => {
+    const scrolled = document.documentElement.scrollTop
+    const width = window.screen.width
+
+    if (scrolled > 300 && width <= 800){ 
+      setIsScrollTopVisible(true) 
+    }  
+    else if (scrolled <= 300 || width > 800){ 
+      setIsScrollTopVisible(false)
+    }
+  }; 
+  
+  const scrollToTop = () =>{ 
+    window.scrollTo({ 
+      top: 0,  
+      behavior: 'smooth'
+    }); 
+  }; 
+  
+  window.addEventListener('scroll', btnScrollTopVisible); 
 
   return (
     <section id="home">
@@ -36,12 +58,14 @@ function Home() {
           <ThemeToggle />
           <img className="home-avatar" src={avatar} alt="picture" />
         </div>
-        <div className="home-scrow-div">
-          <a className="scrow-down-link" href="#about">
-            <FaArrowDown className="scrow-down-icon" />
-            scrow down
-          </a>
-        </div>
+        <a href="#about" class="home-scrollDown">
+          <div class="mouse">
+            <div class="scroller"></div>
+          </div>
+        </a>
+        <button className={`home-scrollTop ${isScrollTopVisible ? "scrollTopVisible" : ""}`} onClick={scrollToTop}>
+          <FaArrowUp className="scrow-top-icon" />
+        </button>
       </div>
     </section>
   );

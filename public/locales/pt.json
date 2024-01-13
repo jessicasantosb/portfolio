@@ -13,6 +13,8 @@
   "contactTitle": "contato",
   "contactSubtitle": "Não hesite em entrar em contato comigo, responderei o mais rápido possível",
   "contactText": "Enviar mensagem",
+  "contactBubble": "Copiado para a área de transferência",
+  "contactBubbleError": "Erro ao copiar",
 
   "pageSection1": "Página Inicial",
   "pageSection2": "Sobre",

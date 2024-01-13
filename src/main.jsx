@@ -5,11 +5,11 @@ import App from "./App.jsx";
 import "./App.css";
 import ThemeContextWrapper from "./components/contexts/ThemeContextWrapper.jsx";
 import { LanguageProvider } from "./components/contexts/LanguageContext.jsx";
-import ErrorPage from './components/ErrorPage.jsx'
+import ErrorPage from "./components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/portfolio",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
   },
