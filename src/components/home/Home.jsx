@@ -58,9 +58,9 @@ function Home() {
           <ThemeToggle />
           <img className="home-avatar" src={avatar} alt="picture" />
         </div>
-        <a href="#about" class="home-scrollDown">
-          <div class="mouse">
-            <div class="scroller"></div>
+        <a href="#about" className="home-scrollDown">
+          <div className="mouse">
+            <div className="scroller"></div>
           </div>
         </a>
         <button className={`home-scrollTop ${isScrollTopVisible ? "scrollTopVisible" : ""}`} onClick={scrollToTop}>

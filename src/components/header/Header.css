@@ -22,14 +22,14 @@
 .nav-links li {
   position: relative;
 }
-.nav-links li a {
+.nav-link {
   color: var(--text-light);
   text-decoration: none;
 }
-.nav-links li a:hover {
+.nav-link:hover {
   color: var(--orange-color);
 }
-.nav-links li a::before {
+.nav-link::before {
   content: "";
   display: block;
   height: 2px;
@@ -39,7 +39,7 @@
   transition: all 0.3s ease-in-out;
   margin: 0 0 0 10%;
 }
-.nav-links li a:hover::before {
+.nav-link:hover::before {
   width: 80%;
 }
 .navbar-icons a i::before {
@@ -56,8 +56,16 @@
 }
 .progressMainStyle {
   height: 2px;
-  background: linear-gradient(90deg, rgba(150,150,150,1) 0%, rgba(117,117,117,1) 35%, rgba(65,65,65,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(150, 150, 150, 1) 0%,
+    rgba(117, 117, 117, 1) 35%,
+    rgba(65, 65, 65, 1) 100%
+  );
   width: 15%;
+}
+.hamburger {
+  display: none;
 }
 
 /* light theme */
@@ -73,20 +81,52 @@
 .light-theme .nav-links {
   background-color: var(--primary-light);
 }
+.light-theme .line {
+  stroke: var(--title-light);
+}
 
 @media screen and (max-width: 800px) {
-  .line {
-    width: 30px;
-    height: 3px;
-    background-color: var(--primary-light);
-    margin: 5px;
-  }
   .hamburger {
+    display: block;
     position: fixed;
     cursor: pointer;
     right: 1rem;
     top: 1rem;
     z-index: 4;
+  }
+  .line {
+    fill: none;
+    stroke: var(--title-dark);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
   }
   .nav-links {
     position: fixed;
