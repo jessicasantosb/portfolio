@@ -12,6 +12,7 @@ function Home() {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false)
   const { languageData } = useContext(LanguageContext);
 
+  // set scroll to top button visible
   const btnScrollTopVisible = () => {
     const scrolled = document.documentElement.scrollTop
     const width = window.screen.width
@@ -23,15 +24,16 @@ function Home() {
       setIsScrollTopVisible(false)
     }
   }; 
-  
+
+  window.addEventListener('scroll', btnScrollTopVisible); 
+
+  // set scroll to top
   const scrollToTop = () =>{ 
     window.scrollTo({ 
       top: 0,  
       behavior: 'smooth'
     }); 
-  }; 
-  
-  window.addEventListener('scroll', btnScrollTopVisible); 
+  };
 
   return (
     <section id="home">
@@ -40,7 +42,7 @@ function Home() {
           <ProfilesIcons />
         </div>
         <div className="home-main">
-          <h1 className="title">
+          <h1 className="title" >
             {languageData.homeTitleGretting}
             <br />
             {languageData.homeTitle}

@@ -9,7 +9,7 @@
   --primary-light: #FBF9F9;
   --primary-dark: #171717;
   --secondary-dark: #1f1f1f;
-  --secondary-light: #ECCDB4;
+  --secondary-light: #f8dec8;
   --title-light: #414141;
   --title-dark: #FBF9F9;
   --subtitle-light: #686767;
@@ -22,6 +22,9 @@
   --discord-color: #7289da;
   --twitter-color: #1da1f2;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--primary-dark);
   color: var(--text-dark);
@@ -31,17 +34,31 @@ body {
   color: var(--title-dark);
   text-align: center;
   font-size: 3.5rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .subtitle {
   color: var(--subtitle-dark);
   text-align: center;
   padding: 20px 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .title-underline {
   color: var(--orange-color);
   font-weight: bold;
   animation: piscar 1s infinite;
 }
+a::selection, p::selection {
+  background-color: var(--orange-color);
+  color: var(--primary-light);
+}
+h2::selection, h3::selection, h4::selection {
+  color: var(--text-dark);
+}
+
 @keyframes piscar {
   0% {
     opacity: 0;

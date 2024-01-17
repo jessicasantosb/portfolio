@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import "./About.css";
+import { Parallax } from "react-scroll-parallax";
 import { LanguageContext } from "../contexts/LanguageContext";
 import Button from "../buttons/Buttons";
 
@@ -7,7 +8,8 @@ function About() {
   const { languageData } = useContext(LanguageContext);
 
   return (
-    <section id="about">
+    <Parallax translateX={[-100, 100]} opacity={[2,0]}>
+      <section id="about">
       <h1 className="title">
         {languageData.aboutTitle}
         <span className="title-underline">_</span>
@@ -23,6 +25,8 @@ function About() {
         />
       </div>
     </section>
+    </Parallax>
+    
   );
 }
 

@@ -66,36 +66,24 @@ function Navbar() {
       </div>
       <div className="navbar">
         <h3 className="logo">Jessica</h3>
-        <ul className="nav-links">
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>
-            <a
-              className="nav-link"
-              href="#home"
-            >
+            <a className="nav-link" href="#home">
               {languageData.pageSection1}
             </a>
           </li>
           <li>
-            <a
-              className="nav-link"
-              href="#about"
-            >
+            <a className="nav-link" href="#about">
               {languageData.pageSection2}
             </a>
           </li>
           <li>
-            <a
-              className="nav-link"
-              href="#projects"
-            >
+            <a className="nav-link" href="#projects">
               {languageData.pageSection3}
             </a>
           </li>
           <li>
-            <a
-              className="nav-link"
-              href="#contact"
-            >
+            <a className="nav-link" href="#contact">
               {languageData.pageSection4}
             </a>
           </li>

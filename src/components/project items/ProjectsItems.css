@@ -5,6 +5,17 @@
   border-radius: 10px;
   display: flex;
   padding: 20px;
+  animation: fadeInUp 1s ease;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .project-item img {
   border-radius: 10px;
@@ -28,6 +39,9 @@
   list-style: none;
   border: 1px solid;
   border-radius: 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .tag.html {
   border-color: #ff550a;

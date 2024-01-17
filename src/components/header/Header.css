@@ -12,6 +12,9 @@
   justify-content: space-between;
   padding: 1.5rem 5rem;
 }
+.logo {
+  z-index: 5;
+}
 .nav-links {
   float: right;
   display: flex;
@@ -41,10 +44,6 @@
 }
 .nav-link:hover::before {
   width: 80%;
-}
-.navbar-icons a i::before {
-  content: "";
-  display: none;
 }
 .progressMainWrapper {
   position: sticky;
@@ -92,7 +91,7 @@
     cursor: pointer;
     right: 1rem;
     top: 1rem;
-    z-index: 4;
+    z-index: 5;
   }
   .line {
     fill: none;
@@ -130,7 +129,6 @@
   }
   .nav-links {
     position: fixed;
-    z-index: 3;
     background-color: var(--primary-dark);
     height: 40vh;
     width: 100vw;
@@ -138,11 +136,12 @@
     left: 0;
     justify-content: space-around;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 70px 0;
     clip-path: circle(50px at 90% -60%);
     -webkit-clip-path: circle(50px at 90% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 4;
   }
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
