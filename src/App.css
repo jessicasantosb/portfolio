@@ -6,15 +6,15 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-light: #FBF9F9;
+  --primary-light: #fbf9f9;
   --primary-dark: #171717;
   --secondary-dark: #1f1f1f;
   --secondary-light: #f8dec8;
   --title-light: #414141;
-  --title-dark: #FBF9F9;
+  --title-dark: #fbf9f9;
   --subtitle-light: #686767;
   --subtitle-dark: #808080;
-  --text-ligth: #CFCFC2;
+  --text-ligth: #cfcfc2;
   --text-dark: #969696;
   --orange-color: #e57c23;
   --github-color: purple;
@@ -29,6 +29,7 @@ body {
   background-color: var(--primary-dark);
   color: var(--text-dark);
   font-family: "Poppins", sans-serif;
+  width: 100%;
 }
 .title {
   color: var(--title-dark);
@@ -51,11 +52,14 @@ body {
   font-weight: bold;
   animation: piscar 1s infinite;
 }
-a::selection, p::selection {
+a::selection,
+p::selection {
   background-color: var(--orange-color);
   color: var(--primary-light);
 }
-h2::selection, h3::selection, h4::selection {
+h2::selection,
+h3::selection,
+h4::selection {
   color: var(--text-dark);
 }
 

@@ -1,22 +1,24 @@
 /* dark theme */
 .language-btn {
-    background-color: var(--primary-dark);
-    color: var(--title-dark);
-    border: none;
-    margin-top: 10px;
-    padding: 3px;
-    font-size: 1.15rem;
-    cursor: pointer;
+  background-color: var(--primary-dark);
+  color: var(--title-dark);
+  border: none;
+  padding: 3px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .language-btn.isActive {
-    color: var(--orange-color);
+  color: var(--orange-color);
 }
 
 /* light theme */
 .light-theme .language-btn {
-    background-color: var(--primary-light);
-    color: var(--title-light);
+  background-color: var(--primary-light);
+  color: var(--title-light);
 }
 .light-theme .language-btn.isActive {
-    color: var(--orange-color);
+  color: var(--orange-color);
 }

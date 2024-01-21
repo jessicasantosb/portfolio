@@ -1,16 +1,29 @@
+/* dark-theme */
 #projects {
+  position: relative;
   padding: 80px 15%;
+  background-color: var(--primary-dark);
 }
 .projects-div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  gap: 30px;
   padding-top: 40px;
-  overflow: hidden;
+}
+
+/* light-theme */
+.light-theme #projects {
+  background-color: var(--primary-light);
 }
 
 @media screen and (max-width: 1000px) {
   #projects {
     padding: 80px 5%;
-  }  
+  }
+  .projects-div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

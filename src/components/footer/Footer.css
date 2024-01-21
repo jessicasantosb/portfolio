@@ -1,5 +1,7 @@
 /* dark theme */
 #footer {
+  position: relative;
+  background-color: var(--primary-dark);
   padding: 0 15%;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -37,6 +39,9 @@
 }
 
 /* light theme */
+.light-theme #footer {
+  background-color: var(--primary-light);
+}
 .light-theme .footer-links > * {
   color: var(--text-light);
 }

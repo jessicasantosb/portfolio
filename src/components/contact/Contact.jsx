@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./Contact.css";
-import { Parallax } from "react-scroll-parallax";
 import { LanguageContext } from "../contexts/LanguageContext";
 import {
   FaArrowRight,
@@ -38,8 +37,7 @@ function Contact() {
         <span className="title-underline">_</span>
       </h1>
       <p className="subtitle">{languageData.contactSubtitle}</p>
-      <Parallax opacity={[0, 2]}>
-        <div className="contact-div">
+      <div className="contact-div">
         <div className="contact-card">
           <FaDiscord className="contact-icon" size={50} />
           <h4 className="contact-card-title">Discord</h4>
@@ -87,8 +85,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      </Parallax>
-      
     </section>
   );
 }

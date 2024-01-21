@@ -18,6 +18,7 @@ function Projects() {
         <ProjectsItems projectName={"Weather"} />
         <ProjectsItems projectName={"ReadmeBooks"} />
         <ProjectsItems projectName={"ToDo"} />
+        <ProjectsItems projectName={"Building"} />
       </div>
     </section>
   );

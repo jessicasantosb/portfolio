@@ -1,32 +1,27 @@
 /* dark theme */
 .btn {
   cursor: pointer;
-  margin-top: 40px;
-  position: absolute;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  z-index: 0;
 }
 .btn-wrapper {
   position: relative;
   z-index: 2;
   border: none;
-  background-color: var(--primary-dark);
-}
-.btn.btn-curriculum {
-  margin-left: -100px;
-}
-.btn.btn-curriculum .btn-wrapper {
-  background-color: var(--secondary-dark);
+  background-color: transparent;
 }
 .btn-link {
   display: block;
   width: 150px;
-  padding: 8px 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--title-light);
   color: var(--primary-light);
-  text-align: center;
-  text-decoration: none; 
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.05rem;
@@ -62,12 +57,4 @@
 .btn-link:hover + .btn-div {
   border: 3px solid var(--orange-color);
   right: -35%;
-}
-
-/* light theme */
-.light-theme .btn-wrapper  {
-  background-color: var(--primary-light);
-}
-.light-theme .btn.btn-curriculum .btn-wrapper {
-  background-color: var(--secondary-light);
 }

@@ -1,5 +1,6 @@
 /* dark theme */
 #contact {
+  position: relative;
   padding: 80px 15%;
   background-color: var(--secondary-dark);
 }
@@ -30,7 +31,9 @@
   gap: 5px;
   font-size: 0.75rem;
   color: var(--text-dark);
-  cursor: pointer;
+}
+.contact-card:nth-child(3) .contact-card-data {
+  cursor: copy;
 }
 .contact-card-link {
   display: flex;

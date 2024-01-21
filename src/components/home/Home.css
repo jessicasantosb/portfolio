@@ -1,17 +1,59 @@
 /* dark theme */
 #home {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
 }
+/* background */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --s: 37px; /* control the size */
+  --c: #0000, var(--primary-dark) 0.5deg 119.5deg, #0000 120deg;
+  --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
+  --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
+  --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
+  background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
+    var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
+    var(--g3) 0 calc(1.73 * var(--s)) var(--secondary-dark);
+  background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
+  filter: opacity(.5);
+}
+.background-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+.background-shape svg {
+  position: relative;
+  display: block;
+  width: calc(145% + 1.3px);
+  height: 106px;
+}
+.background-shape .shape-fill {
+  fill: var(--secondary-dark);
+}
+/* container */
 .home-grid {
+  position: fixed;
   display: grid;
   place-items: center;
   grid-template-rows: auto;
-  grid-template-columns: auto 700px auto;
+  grid-template-columns: repeat(3, auto);
 }
 .home-icons {
   grid-row: 1/2;
@@ -37,11 +79,14 @@
 }
 .home-main .title {
   text-align: left;
-  line-height: 5rem;
+  line-height: 4rem;
 }
 .home-main .subtitle {
   display: flex;
   place-items: center;
+}
+.btn-telegram {
+  margin-top: 20px;
 }
 .code-icon {
   color: var(--orange-color);
@@ -57,12 +102,13 @@
 }
 /* scroll down icon */
 .home-scrollDown {
-  position: absolute;
-  bottom: 10px;
-  right: 50%;
+  position: relative;
+  bottom: -150px;
+  right: 30%;
   cursor: pointer;
 }
 .mouse {
+  background-color: var(--secondary-dark);
   padding: 10px 15px;
   height: 35px;
   border: 2px solid var(--title-dark);
@@ -98,6 +144,7 @@
 .home-scrollTop {
   display: none;
   position: fixed;
+  z-index: 5;
   bottom: 1rem;
   right: 0.5rem;
   padding: 5px;
@@ -113,6 +160,14 @@
 }
 
 /* light theme */
+.light-theme .background::before {
+  --c: #0000, var(--primary-light) 0.5deg 119.5deg, #0000 120deg;
+  background-color: var(--secondary-light);
+  filter: opacity(.9);
+}
+.light-theme .background-shape .shape-fill {
+  fill: var(--secondary-light);
+}
 .light-theme .home-title {
   color: var(--title-light);
 }
@@ -120,6 +175,7 @@
   color: var(--text-light);
 }
 .light-theme .mouse {
+  background-color: var(--primary-light);
   border-color: var(--title-light);
 }
 .light-theme .scroller {
@@ -132,13 +188,13 @@
   box-shadow: var(--title-light) 2px 2px 2px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   .home-grid {
-    grid-template-columns: auto 450px auto;
+    grid-template-columns: repeat(3, auto);
   }
   .home-main .title {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .home-avatar {
     height: 200px;
@@ -146,15 +202,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  #home {
-    padding: 50px 0 0 0;
-  }
   .home-grid {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
     justify-content: flex-start;
     align-items: flex-end;
-    padding-bottom: 80px;
+    padding: 100px 3%;
   }
   .home-icons {
     grid-row: 1/2;
@@ -164,16 +217,22 @@
   .home-main {
     grid-row: 2/3;
     grid-column: 1/3;
-    padding: 20px 0 0 0;
-    width: 400px;
+    padding: 10px 0 0 0;
+  }
+  .home-main .subtitle {
+    padding: 0;
   }
   .home-picture {
     grid-row: 1/2;
     grid-column: 2/3;
     justify-self: flex-start;
-    padding-left: 30px;
   }
   .home-scrollDown {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .home-main .subtitle {
+    align-items: flex-start;
   }
 }

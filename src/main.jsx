@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ParallaxProvider } from "react-scroll-parallax";
 import App from "./App.jsx";
 import "./App.css";
 import ThemeContextWrapper from "./components/contexts/ThemeContextWrapper.jsx";
@@ -18,12 +17,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ParallaxProvider>
       <ThemeContextWrapper>
         <LanguageProvider>
           <RouterProvider router={router} />
         </LanguageProvider>
       </ThemeContextWrapper>
-    </ParallaxProvider>
   </React.StrictMode>
 );

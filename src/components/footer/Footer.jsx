@@ -7,8 +7,7 @@ function Footer() {
   const { languageData } = useContext(LanguageContext);
 
   return (
-    <footer id="footer">
-      
+    <footer id="footer">      
       <ul className="footer-links-div">
         <li className="footer-links">
           <a href="#home">{languageData.pageSection1}</a>
