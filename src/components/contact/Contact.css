@@ -5,17 +5,13 @@
   background-color: var(--secondary-dark);
 }
 .contact-div {
-  display: flex;
   align-items: flex-start;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
   margin: 40px;
 }
 .contact-card {
-  display: flex;
   flex-direction: column;
-  place-items: center;
 }
 .contact-icon {
   color: var(--orange-color);
@@ -26,8 +22,6 @@
   color: var(--title-dark);
 }
 .contact-card-data {
-  display: flex;
-  align-items: center;
   gap: 5px;
   font-size: 0.75rem;
   color: var(--text-dark);
@@ -36,8 +30,6 @@
   cursor: copy;
 }
 .contact-card-link {
-  display: flex;
-  align-items: center;
   gap: 5px;
   text-decoration: none;
   color: var(--text-dark);

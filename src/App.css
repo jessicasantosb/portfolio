@@ -35,22 +35,21 @@ body {
   color: var(--title-dark);
   text-align: center;
   font-size: 3.5rem;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 .subtitle {
   color: var(--subtitle-dark);
   text-align: center;
   padding: 20px 0;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 .title-underline {
   color: var(--orange-color);
   font-weight: bold;
   animation: piscar 1s infinite;
+}
+.disable-selection {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 a::selection,
 p::selection {
@@ -61,6 +60,11 @@ h2::selection,
 h3::selection,
 h4::selection {
   color: var(--text-dark);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes piscar {

@@ -7,19 +7,19 @@ function Footer() {
   const { languageData } = useContext(LanguageContext);
 
   return (
-    <footer id="footer">      
-      <ul className="footer-links-div">
-        <li className="footer-links">
-          <a href="#home">{languageData.pageSection1}</a>
+    <footer id="footer" className='disable-selection'>      
+      <ul className="footer-links">
+        <li>
+          <a className="footer-link" href="#home">{languageData.pageSection1}</a>
         </li>
-        <li className="footer-links">
-          <a href="#about">{languageData.pageSection2}</a>
+        <li>
+          <a className="footer-link" href="#about">{languageData.pageSection2}</a>
         </li>
-        <li className="footer-links">
-          <a href="#projects">{languageData.pageSection3}</a>
+        <li>
+          <a className="footer-link" href="#projects">{languageData.pageSection3}</a>
         </li>
-        <li className="footer-links">
-          <a href="#Contact">{languageData.pageSection4}</a>
+        <li>
+          <a className="footer-link" href="#Contact">{languageData.pageSection4}</a>
         </li>
       </ul>
       <div className="footer-icons">

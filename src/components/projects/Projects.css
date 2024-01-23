@@ -2,14 +2,16 @@
 #projects {
   position: relative;
   padding: 80px 15%;
+  width: 100%;
   background-color: var(--primary-dark);
 }
 .projects-div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 30%);
   grid-template-rows: repeat(3, 1fr);
-  place-items: center;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
   padding-top: 40px;
 }
 
@@ -18,12 +20,12 @@
   background-color: var(--primary-light);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   #projects {
     padding: 80px 5%;
   }
   .projects-div {
-    display: grid;
+    padding: 40px 10%;
     grid-template-columns: 1fr;
   }
 }

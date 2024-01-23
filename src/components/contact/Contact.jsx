@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Contact.css";
+import Typewriter from "typewriter-effect";
 import { LanguageContext } from "../contexts/LanguageContext";
 import {
   FaArrowRight,
@@ -32,18 +33,27 @@ function Contact() {
 
   return (
     <section id="contact">
-      <h1 className="title">
-        {languageData.contactTitle}
-        <span className="title-underline">_</span>
-      </h1>
-      <p className="subtitle">{languageData.contactSubtitle}</p>
-      <div className="contact-div">
-        <div className="contact-card">
+      <h1 className="title disable-selection">
+      <Typewriter
+              options={{
+                strings: [languageData.contactTitle],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                pauseFor: 5000,
+                cursor: '_',
+                cursorClassName: "title-underline",
+              }}
+            />
+      </h1>     
+      <p className="subtitle disable-selection">{languageData.contactSubtitle}</p>
+      <div className="contact-div center">
+        <div className="contact-card center">
           <FaDiscord className="contact-icon" size={50} />
           <h4 className="contact-card-title">Discord</h4>
           <p className="contact-card-data">jessica.santosb</p>
           <a
-            className="contact-card-link"
+            className="contact-card-link center"
             href="https://discordapp.com/users/908783512662974464"
             target="_blank"
           >
@@ -51,12 +61,12 @@ function Contact() {
           </a>
         </div>
 
-        <div className="contact-card">
+        <div className="contact-card center">
           <FaWhatsapp className="contact-icon" size={50} />
           <h4 className="contact-card-title">Whatsapp</h4>
           <p className="contact-card-data">+55 31 99738-8500</p>
           <a
-            className="contact-card-link"
+            className="contact-card-link center"
             href="https://wa.me/5531997388500"
             target="_blank"
           >
@@ -64,10 +74,10 @@ function Contact() {
           </a>
         </div>
 
-        <div className="contact-card">
+        <div className="contact-card center">
           <FaEnvelope className="contact-icon" size={50} />
           <h4 className="contact-card-title">Email</h4>
-          <p className="contact-card-data" onClick={copyToClipboard}>
+          <p className="contact-card-data center" onClick={copyToClipboard}>
             jessica.santosb@outlook.com
             <FaCopy size={15} />
           </p>

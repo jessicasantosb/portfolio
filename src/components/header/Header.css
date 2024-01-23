@@ -7,15 +7,15 @@
   background-color: var(--primary-dark);
   color: var(--title-dark);
 }
+.hamburger {
+  display: none;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 5rem;
 }
 .nav-links {
-  float: right;
-  display: flex;
-  align-items: center;
   list-style: none;
   gap: 35px;
 }
@@ -60,9 +60,6 @@
   );
   width: 15%;
 }
-.hamburger {
-  display: none;
-}
 
 /* light theme */
 .light-theme #header {
@@ -73,12 +70,10 @@
 }
 .light-theme .line {
   background-color: var(--primary-dark);
+  stroke: var(--title-light);
 }
 .light-theme .nav-links {
   background-color: var(--primary-light);
-}
-.light-theme .line {
-  stroke: var(--title-light);
 }
 
 @media screen and (max-width: 800px) {

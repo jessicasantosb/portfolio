@@ -11,7 +11,7 @@ function ToggleLanguageBtn() {
   };
 
   return (
-    <div className="language-btn-div">
+    <div className="language-btn-div disable-selection">
       <button
         className={`language-btn ${language === "pt" ? "isActive" : ""}`}
         onClick={handleToggleLanguage}

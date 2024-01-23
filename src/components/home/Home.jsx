@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./Home.css";
 import { FaCode, FaArrowUp } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ThemeToggle from "../toggle theme/ThemeToggle";
 import LanguageToggle from "../toggle language/ToggleLanguageBtn";
@@ -35,7 +36,7 @@ function Home() {
   };
 
   return (
-    <section id="home">
+    <section id="home" className="center">
       {/* background */}
       <div class="background">
         {/* wave */}
@@ -59,12 +60,22 @@ function Home() {
           <ProfilesIcons />
         </div>
         <div className="home-main">
-          <h1 className="title" >
+          <h1 className="title disable-selection">
             {languageData.homeTitleGretting}
             <br />
-            {languageData.homeTitle}
+            <Typewriter
+              options={{
+                strings: [languageData.homeTitle],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                pauseFor: 5000,
+                cursor: "_",
+                cursorClassName: "title-underline",
+              }}
+            />
           </h1>
-          <h4 className="subtitle">
+          <h4 className="subtitle disable-selection">
             <FaCode className="code-icon" size={30} />
             {languageData.homeSubtitle}
           </h4>
@@ -75,7 +86,7 @@ function Home() {
             text={languageData.buttonTelegram}
           />
         </div>
-        <div className="home-picture">
+        <div className="home-img-div">
           <ThemeToggle />
           <img className="home-avatar" src={avatar} alt="picture" />
         </div>

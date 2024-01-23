@@ -66,7 +66,7 @@ function Navbar() {
       </div>
       <div className="navbar">
         <h3 className="logo">Jessica</h3>
-        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <ul className={`nav-links center ${isOpen ? "open" : ""}`}>
           <li>
             <a className="nav-link" href="#home">
               {languageData.pageSection1}

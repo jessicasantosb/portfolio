@@ -3,25 +3,22 @@
   position: relative;
   background-color: var(--primary-dark);
   padding: 0 15%;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
-.footer-links-div {
+.footer-links {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
   padding: 50px;
 }
-.footer-links {
+.footer-links li {
   list-style: none;
 }
-.footer-links a {
+.footer-link {
   text-decoration: none;
   color: var(--text-dark);
 }
-.footer-links a:hover {
+.footer-link:hover {
   color: var(--orange-color);
 }
 .footer-icons div {
@@ -37,7 +34,6 @@
   text-align: center;
   padding: 25px;
 }
-
 /* light theme */
 .light-theme #footer {
   background-color: var(--primary-light);
