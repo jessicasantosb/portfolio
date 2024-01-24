@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./Home.css";
-import { FaCode, FaArrowUp } from "react-icons/fa";
-import Typewriter from "typewriter-effect";
+import { FaCode } from "react-icons/fa";
 import { LanguageContext } from "../contexts/LanguageContext";
+import {HomeTitleTypewriter} from "../TitleTypewriter";
 import ThemeToggle from "../toggle theme/ThemeToggle";
 import LanguageToggle from "../toggle language/ToggleLanguageBtn";
 import avatar from "../../images/avatar.png";
@@ -10,35 +10,12 @@ import ProfilesIcons from "../profile icons/ProfilesIcons";
 import Button from "../buttons/Buttons";
 
 function Home() {
-  const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const { languageData } = useContext(LanguageContext);
-
-  // set scroll to top button visible
-  const btnScrollTopVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    const width = window.screen.width;
-
-    if (scrolled > 300 && width <= 800) {
-      setIsScrollTopVisible(true);
-    } else if (scrolled <= 300 || width > 800) {
-      setIsScrollTopVisible(false);
-    }
-  };
-
-  window.addEventListener("scroll", btnScrollTopVisible);
-
-  // set scroll to top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <section id="home" className="center">
       {/* background */}
-      <div class="background">
+      <div className="background">
         {/* wave */}
         <div className="background-shape">
           <svg
@@ -63,22 +40,8 @@ function Home() {
           <h1 className="title disable-selection">
             {languageData.homeTitleGretting}
             <br />
-            <Typewriter
-              options={{
-                strings: [languageData.homeTitle],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50,
-                pauseFor: 5000,
-                cursor: "_",
-                cursorClassName: "title-underline",
-              }}
-            />
+            <HomeTitleTypewriter />
           </h1>
-          <h4 className="subtitle disable-selection">
-            <FaCode className="code-icon" size={30} />
-            {languageData.homeSubtitle}
-          </h4>
           <LanguageToggle className="language-toggle" />
           <Button
             className="btn-telegram"
@@ -88,7 +51,7 @@ function Home() {
         </div>
         <div className="home-img-div">
           <ThemeToggle />
-          <img className="home-avatar" src={avatar} alt="picture" />
+          <img className="home-avatar disable-selection" src={avatar} alt="picture" />
         </div>
         {/* home link to scroll down */}
         <a href="#about" className="home-scrollDown">
@@ -96,15 +59,6 @@ function Home() {
             <div className="scroller"></div>
           </div>
         </a>
-        {/* button to scroll top when mobile */}
-        <button
-          className={`home-scrollTop ${
-            isScrollTopVisible ? "scrollTopVisible" : ""
-          }`}
-          onClick={scrollToTop}
-        >
-          <FaArrowUp className="scrow-top-icon" />
-        </button>
       </div>
     </section>
   );

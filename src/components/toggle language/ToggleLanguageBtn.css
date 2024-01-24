@@ -4,6 +4,7 @@
   color: var(--title-dark);
   border: none;
   padding: 3px;
+  margin: 15px 0;
   font-size: 1.15rem;
   cursor: pointer;
 }

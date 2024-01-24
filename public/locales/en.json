@@ -3,8 +3,9 @@
   "buttonCurriculum": "Curriculum",
 
   "homeTitleGretting": "Hello!",
-  "homeTitle": "I'm Jessica Bandeira",
-  "homeSubtitle": "I'm a Frontend Developer based in Brazil",
+  "homeTitle1": "I'm Jessica Bandeira",
+  "homeTitle2": "I'm a Frontend Developer",
+  "homeTitle3": "I'm based in Brazil",
 
   "aboutTitle": "about me",
   "aboutSubtitle": "Here you will find more information about me, what I do, and my current skills",

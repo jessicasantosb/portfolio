@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Projects.css";
-import Typewriter from "typewriter-effect";
+import {TitleTypewriter} from "../TitleTypewriter";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProjectsItems from "../project items/ProjectsItems";
 function Projects() {
@@ -9,20 +9,12 @@ function Projects() {
   return (
     <section id="projects">
       <h1 className="title disable-selection">
-      <Typewriter
-              options={{
-                strings: [languageData.projectsTitle],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50,
-                pauseFor: 5000,
-                cursor: '_',
-                cursorClassName: "title-underline",
-              }}
-            />
+        <TitleTypewriter str={languageData.projectsTitle} />
       </h1>
-      <p className="subtitle disable-selection">{languageData.projectsSubtitle}</p>
-      <div className="projects-div" >
+      <p className="subtitle disable-selection">
+        {languageData.projectsSubtitle}
+      </p>
+      <div className="projects-div">
         <ProjectsItems projectName={"Calculator"} />
         <ProjectsItems projectName={"SignIn"} />
         <ProjectsItems projectName={"Weather"} />

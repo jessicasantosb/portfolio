@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Contact.css";
-import Typewriter from "typewriter-effect";
+import {TitleTypewriter} from "../TitleTypewriter";
 import { LanguageContext } from "../contexts/LanguageContext";
 import {
   FaArrowRight,
@@ -34,19 +34,11 @@ function Contact() {
   return (
     <section id="contact">
       <h1 className="title disable-selection">
-      <Typewriter
-              options={{
-                strings: [languageData.contactTitle],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50,
-                pauseFor: 5000,
-                cursor: '_',
-                cursorClassName: "title-underline",
-              }}
-            />
-      </h1>     
-      <p className="subtitle disable-selection">{languageData.contactSubtitle}</p>
+        <TitleTypewriter str={languageData.contactTitle} />
+      </h1>
+      <p className="subtitle disable-selection">
+        {languageData.contactSubtitle}
+      </p>
       <div className="contact-div center">
         <div className="contact-card center">
           <FaDiscord className="contact-icon" size={50} />

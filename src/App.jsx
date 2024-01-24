@@ -6,10 +6,12 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ScrollTop from "./components/scrollTop/ScrollTop";
 
 function App() {
   return (
     <>
+      <ScrollTop />
       <Header />
       <Home />
       <About />

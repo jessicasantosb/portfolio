@@ -38,10 +38,10 @@
 .contact-card-link:hover {
   color: var(--orange-color);
 }
-.contact-email-bubble{
+.contact-email-bubble {
   display: none;
 }
-.contact-email-bubble.show{
+.contact-email-bubble.show {
   display: block;
   position: absolute;
   background-color: var(--primary-dark);
@@ -52,7 +52,7 @@
   font-size: 0.75rem;
 }
 .contact-email-bubble.show.copied-error {
-  border-color: red; 
+  border-color: red;
 }
 
 /* light theme */
@@ -69,7 +69,7 @@
 .light-theme .contact-card-link:hover {
   color: var(--orange-color);
 }
-.light-theme .contact-email-bubble.show{
+.light-theme .contact-email-bubble.show {
   background-color: var(--primary-light);
 }
 
