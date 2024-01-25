@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Sintony&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
@@ -29,23 +30,25 @@ body {
   background-color: var(--primary-dark);
   color: var(--text-dark);
   font-family: "Poppins", sans-serif;
-  width: 100%;
   font-size: clamp(1.125rem, 2vw, 1.25rem);
 }
 .title {
   color: var(--title-dark);
   text-align: center;
-  font-size: 3rem;
+  font-family: "Sintony", sans-serif;
+  font-size: clamp(2.5rem, 3vw, 3rem);
 }
 .subtitle {
   color: var(--subtitle-dark);
   text-align: center;
+  font-family: "Sintony", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.10rem);
   padding: 20px 0;
 }
 .title-underline {
   color: var(--orange-color);
   font-weight: bold;
-  animation: piscar 1s infinite;
+  animation: blink 1s infinite;
 }
 .disable-selection {
   -webkit-user-select: none; /* Safari */
@@ -68,7 +71,17 @@ h4::selection {
   align-items: center;
 }
 
-@keyframes piscar {
+@keyframes home-background-animation {
+  25% {
+    opacity: 1;
+  }
+  58%,
+  100% {
+    opacity: 0.4;
+    scale: 2;
+  }
+}
+@keyframes blink {
   0% {
     opacity: 0;
   }
@@ -100,6 +113,14 @@ h4::selection {
     transform: rotate(-360deg);
   }
 }
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* light theme */
 body.light-theme {
@@ -111,10 +132,4 @@ body.light-theme {
 }
 .light-theme .subtitle {
   color: var(--subtitle-light);
-}
-
-@media screen and (max-width: 1200px) {
-  .title {
-    font-size: 2.5rem;
-  }
 }

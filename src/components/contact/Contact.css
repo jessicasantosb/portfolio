@@ -1,14 +1,15 @@
 /* dark theme */
 #contact {
   position: relative;
-  padding: 80px 15%;
+  padding: 80px 20%;
   background-color: var(--secondary-dark);
 }
 .contact-div {
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 100px;
-  margin: 40px;
+  gap: 50px;
+  margin: 40px 0;
 }
 .contact-card {
   flex-direction: column;
@@ -23,7 +24,7 @@
 }
 .contact-card-data {
   gap: 5px;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   color: var(--text-dark);
 }
 .contact-card:nth-child(3) .contact-card-data {
@@ -73,7 +74,19 @@
   background-color: var(--primary-light);
 }
 
-@media screen and (max-width: 1000px) {
+@supports (animation-timeline: view()) {
+  .contact-div {
+    animation: linear reveal both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 40%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .contact-div {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
   #contact {
     padding: 80px 5%;
   }

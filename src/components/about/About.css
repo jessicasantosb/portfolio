@@ -2,7 +2,7 @@
 #about {
   position: relative;
   background-color: var(--secondary-dark);
-  padding: 80px 15%;
+  padding: 80px 20%;
   flex-direction: column;
 }
 .about-text {
@@ -18,7 +18,14 @@
   background-color: var(--secondary-light);
 }
 
-@media screen and (max-width: 1000px) {
+@supports (animation-timeline: view()) {
+  .about-text {
+    animation: linear reveal both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 40%;
+  }
+}
+@media screen and (max-width: 1200px) {
   #about {
     padding: 80px 5%;
   }
