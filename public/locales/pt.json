@@ -4,7 +4,7 @@
 
   "homeTitleGretting": "Olá!",
   "homeTitle1": "Sou a Jessica Bandeira",
-  "homeTitle2": "Sou uma Desenvolvedora Frontend",
+  "homeTitle2": "Sou uma Dev Frontend",
   "homeTitle3": "Sou do Brasil",
 
   "aboutTitle": "sobre mim",
@@ -26,11 +26,9 @@
   "projectsSubtitle": "Aqui, você encontrará alguns dos meus projetos pessoais. Cada um deles lista as tecnologias utilizadas e o link do repositório",
 
   "projectItemTitle1": "Calculadora",
-  "projectItemTitle2": "Página de Sign-in",
-  "projectItemTitle3": "App de Clima e Tempo",
-  "projectItemTitle4": "Readme.Books",
-  "projectItemTitle5": "Lista de Tarefas",
-  "projectItemLink1": "Repositório",
-  "projectItemLink2": "Ir para o site",
-  "projectItemBuilding": "Mais conteúdo em breve"
+  "projectItemTitle2": "App de Clima e Tempo",
+  "projectItemTitle3": "Readme.Books",
+  "projectItemTitle4": "Lista de Tarefas",
+  "projectItemTextRepository": "Repositório",
+  "projectItemTextLive": "Ir para o site"
 }

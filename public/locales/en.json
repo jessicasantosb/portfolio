@@ -26,11 +26,9 @@
   "projectsSubtitle": "Here, you'll find some of the personal projects I've created. Each of them details the technologies used and provides the repository link",
 
   "projectItemTitle1": "Calculator",
-  "projectItemTitle2": "Sign-in page",
-  "projectItemTitle3": "Weather app",
-  "projectItemTitle4": "Readme.Books",
-  "projectItemTitle5": "To do list",
-  "projectItemLink1": "Repository",
-  "projectItemLink2": "Try it out",
-  "projectItemBuilding": "More content comming soon"
+  "projectItemTitle2": "Weather app",
+  "projectItemTitle3": "Readme.Books",
+  "projectItemTitle4": "To do list",
+  "projectItemTextRepository": "Repository",
+  "projectItemTextLive": "Try it out"  
 }

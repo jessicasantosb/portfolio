@@ -1,27 +1,7 @@
 import "./Buttons.css";
-import { FaTelegramPlane, FaFileDownload } from "react-icons/fa";
-function Buttons({ name, text }) {
-  if (name === "telegram") {
-    return (
-      <div className="btn btn-telegram disable-selection">
-        <button className="btn-wrapper">
-          <a
-            className="btn-link center"
-            href="https://t.me/jessicasantosb"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {text}
-          </a>
-          <div className="btn-div">
-            <FaTelegramPlane className="btn-icon"  size={30} />
-          </div>
-        </button>
-      </div>
-    );
-  }
+import { FaFileDownload } from "react-icons/fa";
 
-  if (name === "curriculum") {
+function Buttons({ text }) {
     return (
       <div className="btn btn-curriculum disable-selection">
         {" "}
@@ -35,12 +15,11 @@ function Buttons({ name, text }) {
             {text}
           </a>
           <div className="btn-div">
-            <FaFileDownload className="btn-icon" size={30} />
+            <FaFileDownload className="btn-icon" />
           </div>
         </button>
       </div>
     );
-  }
 }
 
 export default Buttons;

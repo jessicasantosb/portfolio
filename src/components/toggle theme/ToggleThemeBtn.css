@@ -1,7 +1,10 @@
 .sun-icon, .moon-icon {
-    padding: 5px;
     cursor: pointer;
+    font-size: var(--fs-medium);
 }
 .sun-icon:hover, .moon-icon:hover {
-    color: var(--orange-color);
+    color: var(--clr-accent-dark);
+}
+.light-theme .sun-icon:hover, .light-theme .moon-icon:hover {
+    color: var(--clr-accent-light);
 }

@@ -7,46 +7,66 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-light: #fbf9f9;
-  --primary-dark: #171717;
-  --secondary-dark: #1f1f1f;
-  --secondary-light: #f8dec8;
-  --title-light: #414141;
-  --title-dark: #fbf9f9;
-  --subtitle-light: #686767;
-  --subtitle-dark: #808080;
-  --text-ligth: #cfcfc2;
-  --text-dark: #969696;
-  --orange-color: #e57c23;
-  --github-color: purple;
-  --linkedin-color: #0e76a8;
-  --discord-color: #7289da;
-  --twitter-color: #1da1f2;
+  --clr-bg-dark: #03050d;
+  --clr-primary-dark: #839de4;
+  --clr-secondary-dark: #431d87;
+  --clr-secondary20-dark: hsl(262, 65%, 32%, 20%);
+  --clr-accent-dark: #924cd8;
+  --clr-text-dark: #dbe1f7;
+
+  --clr-bg-light: #F9F6EE;
+  --clr-primary-light: #1c367d;
+  --clr-secondary-light: #9f78e2;
+  --clr-secondary20-light: hsl(224, 63%, 30%, 20%);
+  --clr-accent-light: #6e27b4;
+  --clr-text-light: #080f26;
+
+  --clr-github: #3386dd;
+  --clr-linkedin: #0e76a8;
+  --clr-discord: #7289da;
+  --clr-twitter: #1da1f2;
+  --clr-telegram: #229ED9;
+
+  --clr-error: #ce0606;
+
+  --br: 10px;
+
+  --ff-title: "Sintony", sans-serif;
+  --ff: "Poppins", sans-serif;
+
+  --spacer: 1rem;
+  --spacer-md: calc(var(--spacer) * 2);
+  --spacer-lg: calc(var(--spacer) * 3);
+
+  --header-height: 80px;
+
+  --fs-small: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --fs-medium: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+  --fs-large: clamp(2.25rem, calc(2vw + 1.5rem), 3.25rem);
 }
-html {
+html, body {
+  background-color: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
+  font-family: var(--ff);
+  font-size: var(--fs-small);
   scroll-behavior: smooth;
-}
-body {
-  background-color: var(--primary-dark);
-  color: var(--text-dark);
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  overflow-x: hidden;
 }
 .title {
-  color: var(--title-dark);
   text-align: center;
-  font-family: "Sintony", sans-serif;
-  font-size: clamp(2.5rem, 3vw, 3rem);
+  font-family: var(--ff-title);
+  font-size: var(--fs-large);
+  font-weight: bold;
+  letter-spacing: 30px;
 }
 .subtitle {
-  color: var(--subtitle-dark);
   text-align: center;
-  font-family: "Sintony", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.10rem);
-  padding: 20px 0;
+  font-family: var(--ff-title);
+  font-size: var(--fs-medium);
+  padding-block: var(--spacer-lg);
 }
 .title-underline {
-  color: var(--orange-color);
+  color: var(--clr-accent-dark);
   font-weight: bold;
   animation: blink 1s infinite;
 }
@@ -57,13 +77,12 @@ body {
 }
 a::selection,
 p::selection {
-  background-color: var(--orange-color);
-  color: var(--primary-light);
+  background-color: var(--clr-accent-dark);
 }
 h2::selection,
 h3::selection,
 h4::selection {
-  color: var(--text-dark);
+  color: var(--clr-primary-dark);
 }
 .center {
   display: flex;
@@ -71,65 +90,21 @@ h4::selection {
   align-items: center;
 }
 
-@keyframes home-background-animation {
-  25% {
-    opacity: 1;
-  }
-  58%,
-  100% {
-    opacity: 0.4;
-    scale: 2;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-}
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes reveal {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* light theme */
 body.light-theme {
-  background-color: var(--primary-light);
-  color: var(--text-light);
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-light);
 }
-.light-theme .title {
-  color: var(--title-light);
+.light-theme .title-underline {
+  color: var(--clr-accent-light);
 }
-.light-theme .subtitle {
-  color: var(--subtitle-light);
+.light-theme a::selection,
+.light-theme p::selection {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-bg-light);
+}
+.light-theme h2::selection,
+.light-theme h3::selection,
+.light-theme h4::selection {
+  color: var(--clr-primary-light);
 }

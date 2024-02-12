@@ -12,9 +12,9 @@ export default function ToggleBtn(props) {
     return (
       <div>
         {props.isDark ? (
-          <FaSun className="moon-icon" size={30} onClick={props.toggleDark} />
+          <FaSun className="moon-icon" onClick={props.toggleDark} />
         ) : (
-          <FaMoon className="sun-icon" size={30} onClick={props.toggleDark} />
+          <FaMoon className="sun-icon" onClick={props.toggleDark} />
         )}
       </div>
     );

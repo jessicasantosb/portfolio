@@ -1,6 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Contact.css";
-import {TitleTypewriter} from "../TitleTypewriter";
+import { TitleTypewriter } from "../TitleTypewriter";
 import { LanguageContext } from "../contexts/LanguageContext";
 import {
   FaArrowRight,
@@ -15,6 +17,55 @@ function Contact() {
   const [copyEmailError, setCopyEmailError] = useState(false);
 
   const { languageData } = useContext(LanguageContext);
+
+  const contactRef = useRef();
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      ".contact-card:nth-child(1)",
+      { x: "-1000px", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        // stagger: 0.8,
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top bottom",
+          end: "bottom",
+        },
+      }
+    );
+    gsap.fromTo(
+      ".contact-card:nth-child(2)",
+      { y: "100px", opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        // stagger: 0.8,
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top bottom",
+          end: "bottom",
+        },
+      }
+    );
+    gsap.fromTo(
+      ".contact-card:nth-child(3)",
+      { x: "1000px", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        // stagger: 0.8,
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top bottom",
+          end: "bottom",
+        },
+      }
+    );
+  }, []);
 
   const copyToClipboard = async () => {
     try {
@@ -32,16 +83,18 @@ function Contact() {
   };
 
   return (
-    <section id="contact">
-      <h1 className="title disable-selection">
-        <TitleTypewriter str={languageData.contactTitle} />
-      </h1>
-      <p className="subtitle disable-selection">
-        {languageData.contactSubtitle}
-      </p>
+    <section id="contact" ref={contactRef}>
+      <div className="fade-in">
+        <h1 className="title disable-selection">
+          <TitleTypewriter str={languageData.contactTitle} />
+        </h1>
+        <p className="subtitle disable-selection">
+          {languageData.contactSubtitle}
+        </p>
+      </div>
       <div className="contact-div center">
         <div className="contact-card center">
-          <FaDiscord className="contact-icon" size={50} />
+          <FaDiscord className="contact-icon" />
           <h4 className="contact-card-title">Discord</h4>
           <p className="contact-card-data">jessica.santosb</p>
           <a
@@ -54,7 +107,7 @@ function Contact() {
         </div>
 
         <div className="contact-card center">
-          <FaWhatsapp className="contact-icon" size={50} />
+          <FaWhatsapp className="contact-icon" />
           <h4 className="contact-card-title">Whatsapp</h4>
           <p className="contact-card-data">+55 31 99738-8500</p>
           <a
@@ -67,11 +120,13 @@ function Contact() {
         </div>
 
         <div className="contact-card center">
-          <FaEnvelope className="contact-icon" size={50} />
+          <FaEnvelope className="contact-icon" />
           <h4 className="contact-card-title">Email</h4>
           <p className="contact-card-data center" onClick={copyToClipboard}>
-            jessica.santosb@outlook.com
-            <FaCopy size={15} />
+            jessica.santosb
+            <br />
+            @outlook.com
+            <FaCopy className="contact-icon copy" />
           </p>
           <div
             className={`contact-email-bubble ${copyEmailPopup ? "show" : ""}`}

@@ -7,14 +7,10 @@ function ScrollTop() {
 
   // set scroll to top button visible
   const btnScrollTopVisible = () => {
+    const projectsSection = document.querySelector("#about").clientHeight
     const scrolled = document.documentElement.scrollTop;
-    const width = window.screen.width;
 
-    if (scrolled > 300 && width <= 800) {
-      setIsScrollTopVisible(true);
-    } else if (scrolled <= 300 || width > 800) {
-      setIsScrollTopVisible(false);
-    }
+    scrolled > projectsSection ? setIsScrollTopVisible(true) : setIsScrollTopVisible(false);
   };
 
   window.addEventListener("scroll", btnScrollTopVisible);
@@ -32,7 +28,7 @@ function ScrollTop() {
       className={`scrollTop ${isScrollTopVisible ? "scrollTopVisible" : ""}`}
       onClick={scrollToTop}
     >
-      <FaArrowUp className="scrow-top-icon" />
+      <FaArrowUp className="scrow-top-icon"/>
     </button>
   );
 }

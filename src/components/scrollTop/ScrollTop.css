@@ -5,13 +5,21 @@
   z-index: 5;
   bottom: 1rem;
   right: 0.5rem;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--secondary-dark);
-  color: var(--title-dark);
-  border-color: var(--title-dark);
-  box-shadow: var(--title-dark) 2px 2px 2px;
+  padding: 8px;
+  font-size: var(--fs-medium);
+  border-radius: var(--br);
+  background-color: var(--clr-secondary-dark);
+  color: var(--clr-text-dark);
+  box-shadow: linear-gradient(
+    to right,
+    var(--clr-primary-dark),
+    var(--clr-accent-dark)
+  );
   cursor: pointer;
+}
+.scrollTop:hover {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 .scrollTop.scrollTopVisible {
   display: block;
@@ -19,8 +27,11 @@
 
 /* light theme */
 .light-theme .scrollTop {
-  background-color: var(--primary-light);
-  color: var(--title-light);
-  border-color: var(--title-light);
-  box-shadow: var(--title-light) 2px 2px 2px;
+  background-color: var(--clr-secondary-light);
+  color: var(--clr-text-light);
+  box-shadow: linear-gradient(
+    to right,
+    var(--clr-primary-light),
+    var(--clr-accent-light)
+  );
 }

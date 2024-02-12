@@ -1,21 +1,27 @@
 /* dark theme */
 #profile-icons a {
-  color: var(--title-dark);
+  color: var(--clr-accent-dark);
 }
-.github-icon:hover {
-  color: var(--github-color);
+.icon {
+  font-size: clamp(1rem, 4vw, 3rem);
 }
-.linkedin-icon:hover {
-  color: var(--linkedin-color);
+.github:hover {
+  color: var(--clr-github);
 }
-.discord-icon:hover {
-  color: var(--discord-color);
+.linkedin:hover {
+  color: var(--clr-linkedin);
 }
-.twitter-icon:hover {
-  color: var(--twitter-color);
+.discord:hover {
+  color: var(--clr-discord);
+}
+.twitter:hover {
+  color: var(--clr-twitter);
+}
+.telegram:hover {
+  color: var(--clr-telegram);
 }
 
 /* light theme */
 .light-theme #profile-icons a {
-  color: var(--title-light);
+  color: var(--clr-accent-light);
 }

@@ -1,22 +1,23 @@
 /* dark theme */
 .language-btn {
-  background-color: var(--primary-dark);
-  color: var(--title-dark);
+  background-color: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
   border: none;
-  padding: 3px;
-  margin: 15px 0;
-  font-size: 1.15rem;
+  font-size: var(--fs-small);
   cursor: pointer;
 }
 .language-btn.isActive {
-  color: var(--orange-color);
+  color: var(--clr-accent-dark);
+}
+.language-btn:first-child {
+  padding-right: 20px;
 }
 
 /* light theme */
-.light-theme .language-btn {
-  background-color: var(--primary-light);
-  color: var(--title-light);
-}
 .light-theme .language-btn.isActive {
-  color: var(--orange-color);
+  color: var(--clr-accent-light);
+}
+.light-theme .language-btn {
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-light);
 }

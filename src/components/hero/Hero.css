@@ -1,0 +1,124 @@
+/* dark theme */
+#hero {
+  width: 100vw;
+  height: 100dvh;
+}
+.hero-main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-inline: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gretting {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-dark),
+    var(--clr-accent-dark)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.hero-main .title {
+  text-align: left;
+  letter-spacing: -3px;
+}
+.btn-curriculum {
+  margin-top: var(--spacer-md);
+  margin-bottom: var(--spacer-lg);
+}
+.hero-icons {
+  padding-top: 10%;
+}
+.hero-icons #profile-icons {
+  display: flex;
+  gap: var(--spacer);
+}
+.hero-img-box {
+  width: 50%;
+  height: 45dvh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.hero-img-box:hover .hero-avatar {
+  right: 22%;
+}
+.hero-img-box:hover .hero-svg {
+  bottom: -20px;
+}
+.hero-svg path {
+  fill: var(--clr-secondary-dark);
+}
+.hero-avatar,
+.hero-svg {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-20%);
+  transition: bottom 1s, left 1s;
+}
+.hero-avatar {
+  height: 100%;
+  right: 20%;
+}
+.hero-svg {
+  height: 120%;
+  right: 10%;
+}
+
+/* light theme */
+.light-theme .gretting {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-light),
+    var(--clr-accent-light)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.light-theme .hero-svg path {
+  fill: var(--clr-primary-light);
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-icons {
+    padding-top: 0;
+    width: 5%;
+  }
+  .hero-icons #profile-icons {
+    flex-direction: column;
+    gap: 0;
+  }
+  .btn-curriculum {
+    margin-top: var(--spacer);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero-main {
+    padding-inline: 5%;
+  }
+  .hero-img-box {
+    height: 30dvh;
+  }
+  .hero-img-box:hover .hero-avatar {
+    right: 4%;
+  }
+  .hero-img-box:hover .hero-svg {
+    bottom: -20px;
+  }
+  .hero-avatar,
+  .hero-svg {
+    right: 5%;
+    transform: translateX(-5%);
+    transition: bottom 1s, left 1s;
+  }
+}
+@media screen and (max-width: 950px) {
+  .hero-main .title {
+    height: calc(var(--fs-large) * 3.5);
+  }
+}

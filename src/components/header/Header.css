@@ -1,40 +1,50 @@
 /* dark theme */
 #header {
+  height: var(--header-height);
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  top: 0;
   left: 0;
+  padding-inline: 20%;
   z-index: 3;
-  background-color: var(--primary-dark);
-  color: var(--title-dark);
+  background-color: var(--clr-bg-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.hamburger {
+.hamburger,
+.settings {
   display: none;
 }
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 5rem;
+  letter-spacing: -2px;
 }
-.nav-links {
+.nav-links,
+.nav-icons {
+  background-color: var(--clr-bg-dark);
   list-style: none;
-  gap: 35px;
+  gap: var(--spacer);
 }
 .nav-links li {
   position: relative;
 }
 .nav-link {
-  color: var(--text-light);
+  color: var(--clr-text-dark);
   text-decoration: none;
 }
 .nav-link:hover {
-  color: var(--orange-color);
+  color: var(--clr-primary-dark);
+  cursor: pointer;
 }
 .nav-link::before {
   content: "";
   display: block;
   height: 2px;
+  background-color: var(--clr-primary-dark);
   width: 0%;
-  background-color: var(--orange-color);
   position: absolute;
   transition: all 0.3s ease-in-out;
   margin: 0 0 0 10%;
@@ -43,51 +53,71 @@
   width: 80%;
 }
 .progressMainWrapper {
-  position: sticky;
-  top: 0;
+  position: absolute;
+  top: var(--header-height);
   left: 0;
   right: 0;
   z-index: 1;
   width: 100%;
 }
 .progressMainStyle {
-  height: 2px;
+  height: 5px;
   background: linear-gradient(
-    90deg,
-    rgba(150, 150, 150, 1) 0%,
-    rgba(117, 117, 117, 1) 35%,
-    rgba(65, 65, 65, 1) 100%
+    to right,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark)
   );
   width: 15%;
 }
 
 /* light theme */
 .light-theme #header {
-  background-color: var(--primary-light);
+  background-color: var(--clr-bg-light);
 }
-.light-theme .navbar {
-  color: var(--title-light);
+.light-theme .nav-links,
+.light-theme .nav-icons {
+  background-color: var(--clr-bg-light);
 }
-.light-theme .line {
-  background-color: var(--primary-dark);
-  stroke: var(--title-light);
+.light-theme .nav-link {
+  color: var(--clr-text-light);
 }
-.light-theme .nav-links {
-  background-color: var(--primary-light);
+.light-theme .nav-link:hover {
+  color: var(--clr-secondary-light);
+}
+.light-theme .nav-link::before {
+  background-color: var(--clr-secondary-light);
+}
+.light-theme .progressMainStyle {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-light),
+    var(--clr-secondary-light)
+  );
 }
 
-@media screen and (max-width: 800px) {
-  .hamburger {
+@media screen and (max-width: 1200px) {
+  #header {
+    padding-inline: 5%;
+    flex-direction: row-reverse;
+  }
+  .navbar {
+    flex-direction: row-reverse;
+  }
+  .nav-icons {
+    flex-direction: row-reverse;
+  }
+  .hamburger,
+  .settings {
     display: block;
-    position: fixed;
     cursor: pointer;
-    right: 1rem;
-    top: 1rem;
     z-index: 5;
+  }
+  .settings {
+    font-size: 2rem;
   }
   .line {
     fill: none;
-    stroke: var(--title-dark);
+    stroke: var(--clr-text-dark);
     stroke-width: 6;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,25 +149,43 @@
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
-  .nav-links {
+  .nav-links,
+  .nav-links.setting {
     position: fixed;
-    background-color: var(--primary-dark);
-    height: 40vh;
-    width: 100vw;
+    box-shadow: var(--clr-bg-dark) 0px 13px 27px -5px,
+      var(--clr-text-dark) 0px 8px 16px -8px;
     top: 0;
-    left: 0;
-    justify-content: space-around;
     flex-direction: column;
-    padding: 70px 0;
-    clip-path: circle(50px at 90% -60%);
-    -webkit-clip-path: circle(50px at 90% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
     z-index: 4;
   }
-  .nav-links.open {
+  .nav-links {
+    width: 100vw;
+    min-height: 40vh;
+    left: 0;
+    clip-path: circle(50px at 90% -60%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+  }
+  .nav-links.setting {
+    width: 25vw;
+    min-height: 30dvh;
+    left: 0;
+    clip-path: circle(50px at 90% -60%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+  }
+  .nav-links.open, .nav-links.setting.openSettings {
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1500px at 90% -10%);
     pointer-events: all;
+  }
+
+  /* light theme */
+  .light-theme .line {
+    stroke: var(--clr-text-light);
+  }
+  .light-theme .nav-links {
+    box-shadow: var(--clr-bg-light) 0px 13px 27px -5px,
+      var(--clr-text-light) 0px 8px 16px -8px;
   }
 }

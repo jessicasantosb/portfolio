@@ -1,32 +1,26 @@
 /* dark theme */
 #about {
   position: relative;
-  background-color: var(--secondary-dark);
-  padding: 80px 20%;
+  min-height: 100dvh;
+  width: 100%;
+  padding-top: calc(var(--header-height) + 20px);
+  padding-inline: 20%;
+  background-color: var(--clr-bg-dark);
+  display: flex;
   flex-direction: column;
 }
 .about-text {
   text-align: justify;
-  padding: 50px 0;
-}
-.btn-curriculum {
-  text-align: center;
+  padding-block: var(--spacer);
 }
 
 /* light theme */
 .light-theme #about {
-  background-color: var(--secondary-light);
+  background-color: var(--clr-bg-light);
 }
 
-@supports (animation-timeline: view()) {
-  .about-text {
-    animation: linear reveal both;
-    animation-timeline: view();
-    animation-range: entry 25% cover 40%;
-  }
-}
 @media screen and (max-width: 1200px) {
   #about {
-    padding: 80px 5%;
+    padding-inline: 5%;
   }
 }

@@ -1,56 +1,94 @@
 /* dark theme */
 #footer {
   position: relative;
-  background-color: var(--primary-dark);
-  padding: 0 20%;
+  bottom: 0;
+  background-color: var(--clr-bg-dark);
+  padding-inline: 20%;
+  padding-block: var(--spacer-md);
 }
 .footer-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 80px 0;
+  gap: var(--spacer);
+  padding-block: var(--spacer-lg);
 }
 .footer-links li {
   list-style: none;
 }
 .footer-link {
   text-decoration: none;
-  color: var(--text-dark);
+  color: var(--clr-text-dark);
 }
 .footer-link:hover {
-  color: var(--orange-color);
+  color: var(--clr-primary-dark);
 }
 .footer-icons div {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: var(--spacer);
 }
 .footer-icons div > * {
   cursor: pointer;
-  padding: 5px;
 }
 .footer-copyright {
   text-align: center;
-  padding: 25px;
+  padding-block: var(--spacer-md);
+}
+.shadow {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: 150px;
+  height: 10px;
+  transition: 0.4s;
+  transform: translateX(-50%);
+  -webkit-transition: 0.4s;
+  -webkit-transform: translateX(-50%);
+  -moz-transition: 0.4s;
+  -moz-transform: translateX(-50%);
+  border-radius: 100%;
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-dark),
+    var(--clr-accent-dark)
+  );
+}
+.footer-copyright:hover {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-dark),
+    var(--clr-accent-dark)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.footer-copyright:hover .shadow {
+  width: 200px;
 }
 /* light theme */
 .light-theme #footer {
-  background-color: var(--primary-light);
+  background-color: var(--clr-bg-light);
 }
 .light-theme .footer-link {
-  color: var(--text-light);
+  color: var(--clr-text-light);
+}
+.light-theme .footer-link:hover {
+  color: var(--clr-secondary-light);
 }
 
 @media screen and (max-width: 1200px) {
   #footer {
-    padding: 0 5%;
+    padding-inline: 5%;
   }
 }
 @media screen and (max-width: 800px) {
   .footer-links {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+  }
+  .footer-icons div {
+    gap: 10px;
   }
 }

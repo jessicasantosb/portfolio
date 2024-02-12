@@ -1,176 +1,149 @@
 .project-card {
-  position: relative;
-  height: 100%;
-  background-color: var(--secondary-dark);
-  box-shadow: 0 0 0 5px var(--secondary-dark);
-  border-radius: 10px;
-  overflow: hidden;
-  perspective: 1000px;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px var(--primary-light);
-}
-/* content */
-.project-img {
-  height: 100%;
-  width: 100%;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.card-content {
-  position: absolute;
-  background-color: var(--secondary-dark);
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  display: flex;
+  height: 60vh;
+  margin-block: 3%;
+  padding-block: 2%;
+  padding-inline: 10%;
   flex-direction: column;
   justify-content: space-between;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  gap: var(--spacer);
+  transform-origin: top;
+  overflow: hidden;
+  color: var(--clr-bg-dark);
+  box-shadow: var(--clr-text-dark) 0px 3px 8px;
+  border-radius: var(--br);
+  text-align: center;
+}
+.dots {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 7%;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(
+    var(--clr-text-dark) 25px,
+    transparent 25px
+  );
+  background-size: 84px 84px;
+  opacity: 0.1;
+}
+.project-card:nth-child(1) {
+  background-color: var(--clr-primary-dark);
+}
+.project-card:nth-child(2) {
+  background-color: var(--clr-secondary-dark);
+  color: var(--clr-text-dark);
+}
+.project-card:nth-child(3) {
+  background-color: var(--clr-text-dark);
+}
+.project-card:nth-child(4) {
+  background-color: var(--clr-accent-dark);
+  color: var(--clr-text-dark);
+}
+.project-card:nth-child(2) .card-content .project-link,
+.project-card:nth-child(4) .card-content .project-link {
+  color: var(--clr-text-dark);
 }
 .project-item-title {
-  color: var(--title-dark);
-}
-.project-card:hover .card-content {
-  transform: rotateX(0deg);
-}
-.project-card:hover .project-img {
-  scale: 0;
+  width: 100%;
+  letter-spacing: 5px;
 }
 .tag {
   display: inline-block;
-  font-size: 0.75rem;
-  padding: 5px;
+  padding-block: 2px;
+  padding-inline: 5px;
   margin: 5px;
-  list-style: none;
-  border: 1px solid;
-  border-radius: 10px;
+  border-radius: var(--br);
 }
 .tag.html {
-  border-color: #ff550a;
-  color: #ff550a;
+  background-color: #ff550a;
 }
 .tag.css {
-  border-color: #4a67de;
-  color: #4a67de;
+  background-color: #4a67de;
 }
 .tag.javascript {
-  border-color: #b4ae00;
-  color: #807b00;
+  background-color: #807b00;
 }
 .tag.git {
-  border-color: #6c6c6c;
-  color: #6c6c6c;
+  background-color: #6c6c6c;
 }
 .tag.react {
-  border-color: #1b37a9;
-  color: #1b37a9;
+  background-color: #1b37a9;
 }
 .tag.frontend {
-  border-color: #e13242;
-  color: #e13242;
+  background-color: #e13242;
 }
 .tag.backend {
-  border-color: #e13242;
-  color: #e13242;
+  background-color: #e13242;
 }
 .tag.nodejs {
-  border-color: #215732;
-  color: #215732;
+  background-color: #215732;
 }
 .tag.mongodb {
-  border-color: #4db33d;
-  color: #4db33d;
+  background-color: #4db33d;
+}
+.card-content {
+  height: 50%;
+  justify-content: space-between;
+  gap: var(--spacer);
+  text-align: center;
+}
+.project-img {
+  height: 100%;
 }
 .project-link {
   text-decoration: none;
-  color: var(--text-dark);
+  color: var(--clr-bg-dark);
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.project-link:first-child {
+  padding-bottom: 30px;
+}
 .project-link:hover {
-  color: var(--orange-color);
-}
-/* card for building project*/
-.project-card.building {
-  cursor: wait;
-}
-.project-card.building svg {
-  height: 30px;
-  background-color: var(--title-dark);
-}
-.card-content .card-building-text {
-  text-align: center;
-}
-.loader {
-  width: 48px;
-  height: 48px;
-  background: var(--text-dark);
-  display: block;
-  margin: 70px auto;
-  position: relative;
-  animation: rotationBack 1s ease-in-out infinite reverse;
-}
-.loader::before {
-  content: "";
-  left: 0;
-  top: 0;
-  transform: rotate(45deg);
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  background: var(--text-dark);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-.loader::after {
-  content: "";
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: var(--secondary-dark);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: var(--clr-accent-color);
 }
 
 /* light theme */
 .light-theme .project-card {
-  background-color: var(--secondary-light);
-  box-shadow: 0 0 0 5px var(--secondary-light);
+  color: var(--clr-bg-light);
+  box-shadow: var(--clr-text-light) 0px 3px 8px;
 }
-.light-theme .project-card:hover {
-  box-shadow: 0 8px 16px var(--primary-dark);
+.light-theme .project-card:nth-child(1) {
+  background-color: var(--clr-primary-light);
 }
-.light-theme .project-item-title {
-  color: var(--title-light);
+.light-theme .project-card:nth-child(2) {
+  background-color: var(--clr-secondary-light);
+}
+.light-theme .project-card:nth-child(3) {
+  background-color: var(--clr-text-light);
+}
+.light-theme .project-card:nth-child(4) {
+  background-color: var(--clr-accent-light);
 }
 .light-theme .project-link {
-  color: var(--text-light);
+  color: var(--clr-bg-light);
 }
 .light-theme .project-link:hover {
-  color: var(--orange-color);
-}
-.light-theme .project-card.building svg {
-  color: var(--primary-light);
-  background-color: var(--primary-light);
-}
-.light-theme .loader,
-.light-theme .loader::before {
-  background: var(--subtitle-light);
-}
-.light-theme .loader::after,
-.light-theme .card-content {
-  background: var(--secondary-light);
+  color: var(--clr-accent-light);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   .project-card {
-    min-height: 270px;
+    padding-inline: 5%;
+    justify-content: center;
+  }
+  .card-content {
+    flex-direction: column;
+    height: 30%;
+  }
+  .project-links {
+    display: flex;
+    gap: 30px;
+  }
+  .project-link:first-child {
+    padding-bottom: 0;
   }
 }
