@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./About.css";
-import { TitleTypewriter } from "../TitleTypewriter";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { TitleTypewriter } from "../../utils/TitleTypewriter";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 function About() {
   const { languageData } = useContext(LanguageContext);

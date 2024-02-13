@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
-import { TitleTypewriter } from "../TitleTypewriter";
-import { LanguageContext } from "../contexts/LanguageContext";
-import ProjectsItems from "../project items/ProjectsItems";
+import { TitleTypewriter } from "../../utils/TitleTypewriter";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import ProjectsItems from "./project items/ProjectsItems";
 
 function Projects() {
   const { languageData } = useContext(LanguageContext);

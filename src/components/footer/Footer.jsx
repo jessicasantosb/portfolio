@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Footer.css";
-import { LanguageContext } from "../contexts/LanguageContext";
-import ProfilesIcons from "../profile icons/ProfilesIcons";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import ProfilesIcons from "../../utils/profile icons/ProfilesIcons";
 
 function Footer() {
   const { languageData } = useContext(LanguageContext);
@@ -19,10 +19,12 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
+        duration: 3,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "bottom 600",
-          scrub: true,
+          start: "bottom 100",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -33,23 +35,27 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
+        duration: 3,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "bottom 600",
-          scrub: true,
+          start: "bottom 100",
+          toggleActions: "play none none reverse",
         },
       }
     );
 
     gsap.fromTo(
       ".footer-copyright",
-      { x: -1000 },
+      { x: -1500 },
       {
         x: 0,
+        duration: 3,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "bottom 600",
-          end: "bottom",
+          start: "bottom 100",
+          toggleActions: "play none none reverse",
         },
       }
     );

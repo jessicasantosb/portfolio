@@ -14,7 +14,7 @@
   --clr-accent-dark: #924cd8;
   --clr-text-dark: #dbe1f7;
 
-  --clr-bg-light: #F9F6EE;
+  --clr-bg-light: #f9f6ee;
   --clr-primary-light: #1c367d;
   --clr-secondary-light: #9f78e2;
   --clr-secondary20-light: hsl(224, 63%, 30%, 20%);
@@ -25,7 +25,7 @@
   --clr-linkedin: #0e76a8;
   --clr-discord: #7289da;
   --clr-twitter: #1da1f2;
-  --clr-telegram: #229ED9;
+  --clr-telegram: #229ed9;
 
   --clr-error: #ce0606;
 
@@ -44,7 +44,8 @@
   --fs-medium: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
   --fs-large: clamp(2.25rem, calc(2vw + 1.5rem), 3.25rem);
 }
-html, body {
+html,
+body {
   background-color: var(--clr-bg-dark);
   color: var(--clr-text-dark);
   font-family: var(--ff);
@@ -74,6 +75,10 @@ html, body {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 a::selection,
 p::selection {

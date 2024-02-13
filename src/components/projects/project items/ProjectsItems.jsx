@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import "./ProjectsItems.css";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 import { FaLink, FaExternalLinkAlt } from "react-icons/fa";
-import calculator from "../../images/calculator.png";
-import weather from "../../images/weatherapp.png";
-import readmeBooks from "../../images/readme.books.png";
-import toDo from "../../images/todo.png";
+import calculator from "../../../assets/calculator.png";
+import weather from "../../../assets/weatherapp.png";
+import readmeBooks from "../../../assets/readme.books.png";
+import toDo from "../../../assets/todo.png";
 
 function ProjectsItems() {
-  const { languageData } = useContext(LanguageContext)
+  const { languageData } = useContext(LanguageContext);
 
   const textRepository = languageData.projectItemTextRepository;
   const textLive = languageData.projectItemTextLive;
@@ -30,14 +30,34 @@ function ProjectsItems() {
     },
     {
       title: languageData.projectItemTitle3,
-      tags: ["react", "javascript", "html", "css", "frontend", "git", "backend", "nodejs", "mongodb"],
+      tags: [
+        "react",
+        "javascript",
+        "html",
+        "css",
+        "frontend",
+        "git",
+        "backend",
+        "nodejs",
+        "mongodb",
+      ],
       imgSrc: readmeBooks,
       linkRepository: "https://github.com/jessicasantosb/readme.book",
       linkLive: "https://readmebooks.vercel.app/",
     },
     {
       title: languageData.projectItemTitle4,
-      tags: ["react", "javascript", "html", "css", "frontend", "git", "backend", "nodejs", "mongodb"],
+      tags: [
+        "react",
+        "javascript",
+        "html",
+        "css",
+        "frontend",
+        "git",
+        "backend",
+        "nodejs",
+        "mongodb",
+      ],
       imgSrc: toDo,
       linkRepository: "https://github.com/jessicasantosb/react-to-do-app",
       linkLive: "https://to-do-app-frontend-amn0.onrender.com/",
@@ -58,7 +78,11 @@ function ProjectsItems() {
             ))}
           </ul>
           <div className="card-content center">
-            <img className="project-img" src={project.imgSrc} alt="calculator" />
+            <img
+              className="project-img"
+              src={project.imgSrc}
+              alt="calculator"
+            />
             <div className="project-links">
               <a
                 className="project-link"

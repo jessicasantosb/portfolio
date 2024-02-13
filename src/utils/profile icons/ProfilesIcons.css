@@ -3,7 +3,7 @@
   color: var(--clr-accent-dark);
 }
 .icon {
-  font-size: clamp(1rem, 4vw, 3rem);
+  font-size: var(--fs-large);
 }
 .github:hover {
   color: var(--clr-github);

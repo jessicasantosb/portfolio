@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import "./Header.css";
-import { LanguageContext } from "../contexts/LanguageContext";
-import ThemeToggle from "../toggle theme/ThemeToggle";
-import LanguageToggle from "../toggle language/ToggleLanguageBtn";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import ThemeToggle from "../../utils/toggle theme/ThemeToggle";
+import LanguageToggle from "../../utils/toggle language/ToggleLanguageBtn";
 import { CiSettings } from "react-icons/ci";
 
 function Navbar() {

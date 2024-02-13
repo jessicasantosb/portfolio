@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./App.css";
-import ThemeContextWrapper from "./components/contexts/ThemeContextWrapper.jsx";
-import { LanguageProvider } from "./components/contexts/LanguageContext.jsx";
-import ErrorPage from "./components/ErrorPage.jsx";
+import ThemeContextWrapper from "./contexts/ThemeContextWrapper.jsx";
+import { LanguageProvider } from "./contexts/LanguageContext.jsx";
+import ErrorPage from "./routes/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {

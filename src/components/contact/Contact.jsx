@@ -2,8 +2,8 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Contact.css";
-import { TitleTypewriter } from "../TitleTypewriter";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { TitleTypewriter } from "../../utils/TitleTypewriter";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import {
   FaArrowRight,
   FaDiscord,
@@ -25,43 +25,56 @@ function Contact() {
 
     gsap.fromTo(
       ".contact-card:nth-child(1)",
-      { x: "-1000px", opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        // stagger: 0.8,
-        scrollTrigger: {
-          trigger: contactRef.current,
-          start: "top bottom",
-          end: "bottom",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".contact-card:nth-child(2)",
-      { y: "100px", opacity: 0 },
+      { y: 200, x: 100, opacity: 0 },
       {
         y: 0,
+        x: 0,
         opacity: 1,
-        // stagger: 0.8,
+        duration: 3,
+        ease: "power1.inOut",
         scrollTrigger: {
           trigger: contactRef.current,
-          start: "top bottom",
+          start: "top 100",
           end: "bottom",
+          toggleActions: "play none none reverse",
         },
       }
     );
+
     gsap.fromTo(
-      ".contact-card:nth-child(3)",
-      { x: "1000px", opacity: 0 },
+      ".contact-card:nth-child(2)",
+      { y: 400, x: 100, opacity: 0 },
       {
+        y: 0,
         x: 0,
         opacity: 1,
-        // stagger: 0.8,
+        duration: 3,
+        ease: "power1.inOut",
+        delay: 0.4,
         scrollTrigger: {
           trigger: contactRef.current,
-          start: "top bottom",
+          start: "top 100",
           end: "bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".contact-card:nth-child(3)",
+      { y: 600, x: 100, opacity: 0 },
+      {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 3,
+        ease: "power1.inOut",
+        delay: 0.8,
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 100",
+          end: "bottom",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -83,7 +96,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" ref={contactRef}>
+    <section id="contact">
       <div className="fade-in">
         <h1 className="title disable-selection">
           <TitleTypewriter str={languageData.contactTitle} />
@@ -92,7 +105,7 @@ function Contact() {
           {languageData.contactSubtitle}
         </p>
       </div>
-      <div className="contact-div center">
+      <div className="contact-div center" ref={contactRef}>
         <div className="contact-card center">
           <FaDiscord className="contact-icon" />
           <h4 className="contact-card-title">Discord</h4>

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
-import { LanguageContext } from "./contexts/LanguageContext";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 export function TitleTypewriter(str) {
   return (
