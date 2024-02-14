@@ -28,6 +28,27 @@
   list-style: none;
   gap: var(--spacer);
 }
+.navbar .logo {
+  max-width: var(--fs-large);
+  max-height: var(--fs-large);
+}
+.navbar .logo path {
+  fill: var(--clr-text-dark);
+}
+.navbar:hover .logo path {
+  fill-opacity: 0;
+  stroke: var(--clr-secondary-dark);
+  stroke-width: 2;
+  stroke-dasharray: 870;
+  stroke-dashoffset: 870;
+  animation: draw 4s infinite linear;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .nav-links li {
   position: relative;
 }
@@ -77,6 +98,12 @@
 .light-theme .nav-links,
 .light-theme .nav-icons {
   background-color: var(--clr-bg-light);
+}
+.light-theme .navbar .logo path {
+  fill: var(--clr-text-light);
+}
+.light-theme .navbar:hover .logo path {
+  stroke: var(--clr-secondary-light);
 }
 .light-theme .nav-link {
   color: var(--clr-text-light);

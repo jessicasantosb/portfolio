@@ -1,9 +1,12 @@
 import { useState, useEffect, useContext } from "react";
+import { gsap } from "gsap";
+import { CiSettings } from "react-icons/ci";
 import "./Header.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ThemeToggle from "../../utils/toggle theme/ThemeToggle";
 import LanguageToggle from "../../utils/toggle language/ToggleLanguageBtn";
-import { CiSettings } from "react-icons/ci";
+import Logo from "../../utils/Logo";
+import { hydrate } from "react-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +58,17 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // logo animation
+  useEffect(() => {
+    var h = window.innerHeight/2
+
+    gsap.fromTo(
+      ".logo",
+      { y: h, scale: 0},
+      { y: 0, scale: 1, duration: 2 }
+    );
+  }, []);
+
   return (
     <header id="header">
       <div className="navbar">
@@ -74,7 +88,7 @@ function Navbar() {
             />
           </svg>
         </div>
-        <h3 className="logo">Jessica</h3>
+        <Logo className="logo"/>
         <ul className={`nav-links center ${isOpen ? "open" : ""}`}>
           <li>
             <a className="nav-link" href="#hero">

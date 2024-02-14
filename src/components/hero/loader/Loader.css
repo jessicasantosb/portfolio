@@ -19,7 +19,7 @@
   transform-origin: top;
   background-color: var(--clr-bg-light);
 }
-.loader svg {
+.loader .logo {
   position: absolute;
   max-width: 15%;
   max-height: 15%;
@@ -29,7 +29,7 @@
   bottom: 0;
   margin: auto;
 }
-.loader svg path {
+.loader .logo path {
   fill-opacity: 0;
   stroke: var(--clr-secondary-dark);
   stroke-width: 2;
