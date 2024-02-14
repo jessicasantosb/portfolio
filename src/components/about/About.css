@@ -18,6 +18,7 @@
 /* light theme */
 .light-theme #about {
   background-color: var(--clr-bg-light);
+  box-shadow: 0px -25px 20px -20px var(--clr-secondary20-light);
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,0 +1,37 @@
+/* dark theme */
+.loader {
+  position: absolute;
+  height: 100dvh;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+.loader svg {
+  position: absolute;
+  max-width: 80px;
+  max-height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.loader svg path {
+  fill-opacity: 0;
+  stroke: var(--clr-secondary-dark);
+  stroke-width: 2;
+  stroke-dasharray: 870;
+  stroke-dashoffset: 870;
+  animation: draw 2s infinite linear;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* light theme */
+.light-theme .loader svg path {
+  stroke: var(--clr-secondary-light);
+}

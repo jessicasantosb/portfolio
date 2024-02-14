@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import gsap from "gsap";
 import "./Hero.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
@@ -9,8 +9,6 @@ import Button from "../../utils/buttons/Buttons";
 
 function Hero() {
   const { languageData } = useContext(LanguageContext);
-
-  const heroRef = useRef();
 
   useEffect(() => {
     gsap.fromTo(
@@ -33,7 +31,7 @@ function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="center disable-selection" ref={heroRef}>
+    <section id="hero" className="center disable-selection">
       <main className="hero-main">
         <h1 className="title">
           <span className="gretting">{languageData.homeTitleGretting}</span>{" "}
