@@ -17,7 +17,7 @@ function App() {
     setScreenLoading(true);
     setTimeout(() => {
       setScreenLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (
@@ -26,7 +26,6 @@ function App() {
         <Loader />
       ) : (
         <>
-          {/* <Loader /> */}
           <FadeInAnimation />
           <ScrollTop />
           <Header />

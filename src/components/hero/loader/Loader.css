@@ -6,10 +6,23 @@
   top: 0;
   z-index: 99;
 }
+.blinder-container {
+  position: absolute;
+  height: 100dvh;
+  width: 100%;
+  top: 0;
+  display: flex;
+}
+.blinder {
+  height: 100dvh;
+  flex: 1;
+  transform-origin: top;
+  background-color: var(--clr-bg-light);
+}
 .loader svg {
   position: absolute;
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 15%;
+  max-height: 15%;
   top: 0;
   left: 0;
   right: 0;
@@ -22,7 +35,7 @@
   stroke-width: 2;
   stroke-dasharray: 870;
   stroke-dashoffset: 870;
-  animation: draw 2s infinite linear;
+  animation: draw 1s infinite linear;
 }
 
 @keyframes draw {
@@ -34,4 +47,7 @@
 /* light theme */
 .light-theme .loader svg path {
   stroke: var(--clr-secondary-light);
+}
+.light-theme .blinder {
+  background-color: var(--clr-bg-dark);
 }

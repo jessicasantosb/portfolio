@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Footer.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
@@ -19,7 +19,7 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
@@ -35,7 +35,7 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
@@ -50,7 +50,7 @@ function Footer() {
       { x: -1500 },
       {
         x: 0,
-        duration: 3,
+        duration: 2,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
