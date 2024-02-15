@@ -1,16 +1,13 @@
 import { useState, useEffect, useContext } from "react";
 import { gsap } from "gsap";
-import { CiSettings } from "react-icons/ci";
 import "./Header.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ThemeToggle from "../../utils/toggle theme/ThemeToggle";
 import LanguageToggle from "../../utils/toggle language/ToggleLanguageBtn";
 import Logo from "../../utils/Logo";
-import { hydrate } from "react-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
 
   const { languageData } = useContext(LanguageContext);
@@ -20,16 +17,11 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  const toggleSettingMenu = () => {
-    setIsSettingOpen(!isSettingOpen);
-  };
-
   useEffect(() => {
     const links = document.querySelectorAll(".nav-link");
 
     const handleLinkClick = () => {
       setIsOpen(false);
-      setIsSettingOpen(false);
     };
 
     links.forEach((link) => {
@@ -60,18 +52,15 @@ function Navbar() {
 
   // logo animation
   useEffect(() => {
-    var h = window.innerHeight/2
+    var h = window.innerHeight / 2;
+    var w = window.innerWidth / 2;
 
-    gsap.fromTo(
-      ".logo",
-      { y: h, scale: 0},
-      { y: 0, scale: 1, duration: 2 }
-    );
+    gsap.fromTo(".logo", { y: h, x: w, scale: 0 }, { y: 0,x: 0, scale: 1, duration: 2 });
   }, []);
 
   return (
     <header id="header">
-      <div className="navbar">
+      <nav className="navbar">
         <div
           className={`hamburger ${isOpen ? "opened" : ""}`}
           onClick={toggleMenu}
@@ -88,47 +77,40 @@ function Navbar() {
             />
           </svg>
         </div>
-        <Logo className="logo"/>
-        <ul className={`nav-links center ${isOpen ? "open" : ""}`}>
-          <li>
-            <a className="nav-link" href="#hero">
-              {languageData.pageSection1}
-            </a>
-          </li>
-          <li>
-            <a className="nav-link" href="#about">
-              {languageData.pageSection2}
-            </a>
-          </li>
-          <li>
-            <a className="nav-link" href="#projects">
-              {languageData.pageSection3}
-            </a>
-          </li>
-          <li>
-            <a className="nav-link" href="#contact">
-              {languageData.pageSection4}
-            </a>
-          </li>
-        </ul>
-
-        <CiSettings
-          className={`settings ${isSettingOpen ? "openedSetting" : ""}`}
-          onClick={toggleSettingMenu}
-        />
-        <ul
-          className={`nav-links setting center ${
-            isSettingOpen ? "openSettings" : ""
-          }`}
-        >
-          <li>
-            <LanguageToggle className="nav-link" />
-          </li>
-          <li>
-            <ThemeToggle className="nav-link" />
-          </li>
-        </ul>
-      </div>
+        <Logo className="logo" />
+        <div className={`nav-links center ${isOpen ? "open" : ""}`}>
+          <ul>
+            <li>
+              <a className="nav-link" href="#hero">
+                {languageData.pageSection1}
+              </a>
+            </li>
+            <li>
+              <a className="nav-link" href="#about">
+                {languageData.pageSection2}
+              </a>
+            </li>
+            <li>
+              <a className="nav-link" href="#projects">
+                {languageData.pageSection3}
+              </a>
+            </li>
+            <li>
+              <a className="nav-link" href="#contact">
+                {languageData.pageSection4}
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <LanguageToggle className="nav-link icon" />
+            </li>
+            <li>
+              <ThemeToggle className="nav-link icon" />
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div className="progressMainWrapper">
         <div
           className="progressMainStyle"

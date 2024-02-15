@@ -1,6 +1,7 @@
 .sun-icon, .moon-icon {
     cursor: pointer;
     font-size: var(--fs-medium);
+    transition: all 1s ease-out;
 }
 .sun-icon:hover, .moon-icon:hover {
     color: var(--clr-accent-dark);

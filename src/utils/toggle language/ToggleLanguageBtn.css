@@ -5,6 +5,7 @@
   border: none;
   font-size: var(--fs-small);
   cursor: pointer;
+  transition: all 1s ease-out;
 }
 .language-btn.isActive {
   color: var(--clr-accent-dark);
