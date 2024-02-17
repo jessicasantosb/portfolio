@@ -1,6 +1,12 @@
-{
-  "buttonTelegram": "Diga oi",
-  "buttonCurriculum": "Currículo",
+{  
+  "pageSection1": "Página Inicial",
+  "pageSection2": "Sobre",
+  "pageSection3": "Projetos",
+  "pageSection4": "Contato",
+
+  "buttonDownload": "Baixar",
+  "buttonResume": "Currículo",
+  "buttonBack": "Voltar",
 
   "homeTitleGretting": "Olá!",
   "homeTitle1": "Sou a Jessica Bandeira",
@@ -11,17 +17,6 @@
   "aboutSubtitle": "Aqui você encontrará mais informações sobre mim, o que faço e minhas habilidades atuais",
   "aboutText": "Sou uma Desenvolvedora Web autodidata de 25 anos focada em aprimorar minhas habilidades de front-end. Eu me envolvo ativamente em uma infinidade de recursos online e me aprofundo em tecnologias como HTML, CSS e JavaScript em plataformas como YouTube e Udemy. Minha língua materna é o Português, mas tenho um bom domínio do inglês, especialmente na leitura, o que me dá acesso a conteúdos e recursos em um dos idiomas mais falados no mundo da tecnologia.",
 
-  "contactTitle": "contato",
-  "contactSubtitle": "Não hesite em entrar em contato comigo, responderei o mais rápido possível",
-  "contactText": "Enviar mensagem",
-  "contactBubble": "Copiado para a área de transferência",
-  "contactBubbleError": "Erro ao copiar",
-
-  "pageSection1": "Página Inicial",
-  "pageSection2": "Sobre",
-  "pageSection3": "Projetos",
-  "pageSection4": "Contato",
-
   "projectsTitle": "projetos",
   "projectsSubtitle": "Aqui, você encontrará alguns dos meus projetos pessoais. Cada um deles lista as tecnologias utilizadas e o link do repositório",
 
@@ -30,5 +25,57 @@
   "projectItemTitle3": "Readme.Books",
   "projectItemTitle4": "Lista de Tarefas",
   "projectItemTextRepository": "Repositório",
-  "projectItemTextLive": "Ir para o site"
+  "projectItemTextLive": "Ir para o site",
+
+  "contactTitle": "contato",
+  "contactSubtitle": "Não hesite em entrar em contato comigo, responderei o mais rápido possível",
+  "contactText": "Enviar mensagem",
+  "contactBubble": "Copiado para a área de transferência",
+  "contactBubbleError": "Erro ao copiar",
+
+  "resumeTitle": "Jessica Bandeira",
+  "resumeSubtitle": "Desenvolvedora Frontend",
+
+  "resumeSumaryTitle": "Sumário",
+  "resumeSumary": "Desenvolvedora Front-end aspirante com proeficiência em HTML, CSS, Tailwind, Bootstrap, JavaScript e React. Foco principal em entregar um código com alta qualidade e otimização do desempenho dos sites. Ambiciosa em contribuir com um time colaborativo e ter um constante aprendizado e crescimento.",
+
+  "resumeExperienceTitle": "Experiência",
+  "resumeExperienceDescription": "Telemarketing ativo",
+  "resumeExperienceDate": "Fevereiro 2016 - Agosto 2016",
+  "resumeExperienceLocation": "GDAX Call Center Inteligente - Belo Horizonte, MG - Brasil",
+
+  "resumeEducationTitle": "Educação",
+  "resumeEducation1Description": "Ensino Médio",
+  "resumeEducation1Date": "2015 - concluído",
+  "resumeEducation1Location": "E. E. Ari da Franca - Belo Horizonte, MG - Brasil",
+
+  "resumeEducation2Description": "Web Development Bootcamp",
+  "resumeEducation2Date": "2023 - concluído",
+  "resumeEducation2Location": "62 horas de vídeo on-demand - Udemy",
+
+  "resumeEducation3Description": "Comunicação e Oratória",
+  "resumeEducation3Date": "2023 - concluído",
+  "resumeEducation3Location": "6 horas de vídeo on-demand - Udemy",
+
+  "resumeContactTitle": "Contato",
+  "resumeContactNumber": "+55 31 99738-8500",
+  "resumeContactEmail": "jessica.santosb@outlook.com",
+  "resumeContactLinkedIn": "jessicasantosb",
+  "resumeContactGithub": "jessicasantosb",
+  "resumeContactLocation": "Belo Horizonte, MG - Brasil",
+
+  "resumeSkillsTitle": "Habilidades",
+  "resumeSkillsSubtitle1": "Técnicas",
+  "resumeTechnicalSkill1": "HTML, CSS, Tailwind, Bootstrap, JavaScript, React",
+  "resumeTechnicalSkill2": "Git, GitHub, VS code",
+  "resumeTechnicalSkill3": "Windows, Linux",
+
+  "resumeSkillsSubtitle2": "Interpessoais",
+  "resumeSoftSkill1": "Comunicação verbal e escrita efetiva.",
+  "resumeSoftSkill2": "Habilidades criativas e analíticas em resolução de problemas.",
+  "resumeSoftSkill3": "Colaborativa e solidária em trabalho em equipe.",
+
+  "resumeLanguagesTitle": "Idiomas",
+  "resumeLanguage1": "Português: nativo",
+  "resumeLanguage2": "Inglês: intermediário"
 }

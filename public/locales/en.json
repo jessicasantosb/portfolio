@@ -1,6 +1,12 @@
 {
-  "buttonTelegram": "Say hi",
-  "buttonCurriculum": "Curriculum",
+  "pageSection1": "Home",
+  "pageSection2": "About",
+  "pageSection3": "Project",
+  "pageSection4": "Contact",
+
+  "buttonDownload": "Download",
+  "buttonResume": "Resume",
+  "buttonBack": "Back",
 
   "homeTitleGretting": "Hello!",
   "homeTitle1": "I'm Jessica Bandeira",
@@ -11,17 +17,6 @@
   "aboutSubtitle": "Here you will find more information about me, what I do, and my current skills",
   "aboutText": "I am a 25-year-old self-taught web developer focused on improving my front-end skills. I actively immerse myself in a plethora of online resources and delve into technologies such as HTML, CSS and JavaScript on platforms such as YouTube and Udemy. My native language is Portuguese, but I have a good command of English, especially reading, which gives me access to content and resources in one of the most spoken languages in the tech world.",
 
-  "contactTitle": "contact",
-  "contactSubtitle": "Feel free to contact me, I will get back to you as soon as possible",
-  "contactText": "Message me",
-  "contactBubble": "Copied to clipboard",
-  "contactBubbleError": "Erro copying",
-
-  "pageSection1": "Home",
-  "pageSection2": "About",
-  "pageSection3": "Project",
-  "pageSection4": "Contact",
-
   "projectsTitle": "projects",
   "projectsSubtitle": "Here, you'll find some of the personal projects I've created. Each of them details the technologies used and provides the repository link",
 
@@ -30,5 +25,57 @@
   "projectItemTitle3": "Readme.Books",
   "projectItemTitle4": "To do list",
   "projectItemTextRepository": "Repository",
-  "projectItemTextLive": "Try it out"  
+  "projectItemTextLive": "Try it out",
+
+  "contactTitle": "contact",
+  "contactSubtitle": "Feel free to contact me, I will get back to you as soon as possible",
+  "contactText": "Message me",
+  "contactBubble": "Copied to clipboard",
+  "contactBubbleError": "Erro copying",
+
+  "resumeTitle": "Jessica Bandeira",
+  "resumeSubtitle": "Frontend Developer",
+
+  "resumeSumaryTitle": "Sumary",
+  "resumeSumary": "Aspiring Front-end Developer with proficiency in HTML, CSS, Tailwind, Bootstrap, JavaScript, and React. Primary focus on delivering high-quality code and optimizing website performance. Ambitious to contribute to a collaborative team and committed to continuous learning and growth.",
+
+  "resumeExperienceTitle": "Experience",
+  "resumeExperienceDescription": "Telemarketing agent",
+  "resumeExperienceDate": "February 2016 - August 2016 ",
+  "resumeExperienceLocation": "GDAX Call Center Inteligente - Belo Horizonte, MG - Brazil",
+
+  "resumeEducationTitle": "Education",
+  "resumeEducation1Description": "High School Degree",
+  "resumeEducation1Date": "2015 - completed",
+  "resumeEducation1Location": "E. E. Ari da Franca - Belo Horizonte, MG - Brazil",
+
+  "resumeEducation2Description": "Web Development Bootcamp",
+  "resumeEducation2Date": "2023 - completed",
+  "resumeEducation2Location": "62 hours on-demand video - Udemy",
+
+  "resumeEducation3Description": "Communication and Oratory",
+  "resumeEducation3Date": "2023 - completed",
+  "resumeEducation3Location": "6 hours on-demand video - Udemy",
+
+  "resumeContactTitle": "Contact",
+  "resumeContactNumber": "+55 31 99738-8500",
+  "resumeContactEmail": "jessica.santosb@outlook.com",
+  "resumeContactLinkedIn": "jessicasantosb",
+  "resumeContactGithub": "jessicasantosb",
+  "resumeContactLocation": "Belo Horizonte, MG - Brazil",
+
+  "resumeSkillsTitle": "Skills",
+  "resumeSkillsSubtitle1": "Technical skills",
+  "resumeTechnicalSkill1": "HTML, CSS, Tailwind, Bootstrap, JavaScript, React",
+  "resumeTechnicalSkill2": "Git, GitHub, VS code",
+  "resumeTechnicalSkill3": "Windows, Linux",
+
+  "resumeSkillsSubtitle2": "Soft skills",
+  "resumeSoftSkill1": "Effective verbal and written communication",
+  "resumeSoftSkill2": "Analytical and creative problem-solving abilities",
+  "resumeSoftSkill3": "Collaborative and supportive team player",
+
+  "resumeLanguagesTitle": "Languages",
+  "resumeLanguage1": "Portuguese: native",
+  "resumeLanguage2": "English: intermediary"
 }

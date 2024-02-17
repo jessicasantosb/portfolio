@@ -132,7 +132,6 @@
   .navbar {
     justify-content: space-between;
     flex-direction: row-reverse;
-    background-color: lightblue;
   }
   /* dropdown icon  */
   .hamburger {

@@ -26,7 +26,7 @@
   text-align: left;
   letter-spacing: -3px;
 }
-.btn-curriculum {
+.btn.resume {
   margin-top: var(--spacer-md);
   margin-bottom: var(--spacer-lg);
 }
@@ -93,7 +93,7 @@
     flex-direction: column;
     gap: 0;
   }
-  .btn-curriculum {
+  .btn.resume {
     margin-top: var(--spacer);
   }
 }

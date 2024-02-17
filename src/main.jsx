@@ -6,12 +6,22 @@ import "./App.css";
 import ThemeContextWrapper from "./contexts/ThemeContextWrapper.jsx";
 import { LanguageProvider } from "./contexts/LanguageContext.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
+import Resume from "./routes/resume/Resume.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <App />
+      },
+      {
+        path: "/resume",
+        element: <Resume />
+      }
+    ]
   },
 ]);
 

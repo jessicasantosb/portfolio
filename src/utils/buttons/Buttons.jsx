@@ -1,25 +1,53 @@
+import { useNavigate } from "react-router-dom";
 import "./Buttons.css";
-import { FaFileDownload } from "react-icons/fa";
+import { FaDownload, FaExternalLinkAlt, FaArrowLeft } from "react-icons/fa";
 
-function Buttons({ text }) {
-    return (
-      <div className="btn btn-curriculum disable-selection">
-        {" "}
-        <button className="btn-wrapper">
-          <a
-            className="btn-link center"
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {text}
-          </a>
-          <div className="btn-div">
-            <FaFileDownload className="btn-icon" />
-          </div>
-        </button>
-      </div>
-    );
+function ButtonResume({ text }) {
+  const navigate = useNavigate();
+
+  const handleBtnResumeClick = () => {
+    navigate("/resume");
+  };
+
+  return (
+    <button
+      className="btn resume center disable-selection"
+      onClick={handleBtnResumeClick}
+    >
+      {text}
+      <FaExternalLinkAlt className="btn-icon" />
+    </button>
+  );
 }
 
-export default Buttons;
+function ButtonDownload({ text, handleBtnDownloadClick }) {
+
+  return (
+    <button
+      id="btnDownload"
+      className="btn download center disable-selection"
+      onClick={handleBtnDownloadClick}
+    >
+      {text}
+      <FaDownload className="btn-icon" />
+    </button>
+  );
+}
+
+function ButtonBack({ text }) {
+  const navigate = useNavigate();
+
+  const handleBtnBackClick = () => {
+    navigate("/");
+    console.log("back");
+  };
+
+  return (
+    <button className="btn back center disable-selection" onClick={handleBtnBackClick}>
+      <FaArrowLeft className="btn-icon back" />
+      <span>{text}</span>
+    </button>
+  );
+}
+
+export { ButtonResume, ButtonDownload, ButtonBack };

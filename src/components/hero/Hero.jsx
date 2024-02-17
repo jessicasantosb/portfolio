@@ -5,7 +5,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { HomeTitleTypewriter } from "../../utils/TitleTypewriter";
 import avatar from "../../assets/avatar.png";
 import ProfilesIcons from "../../utils/profile icons/ProfilesIcons";
-import Button from "../../utils/buttons/Buttons";
+import { ButtonResume } from "../../utils/buttons/Buttons";
 
 function Hero() {
   const { languageData } = useContext(LanguageContext);
@@ -18,7 +18,7 @@ function Hero() {
     );
 
     gsap.fromTo(
-      ".btn-curriculum",
+      ".btn.resume",
       { y: "50px", opacity: 0 },
       { y: 0, opacity: 1, delay: 0.8 }
     );
@@ -39,11 +39,7 @@ function Hero() {
             <HomeTitleTypewriter />
           </span>
         </h1>
-        <Button
-          className="btn-curriculum"
-          name={"curriculum"}
-          text={languageData.buttonCurriculum}
-        />
+        <ButtonResume className="btn-resume" text={languageData.buttonResume} />
         <div className="hero-icons">
           <ProfilesIcons />
         </div>
