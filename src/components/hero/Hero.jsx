@@ -33,13 +33,18 @@ function Hero() {
   return (
     <section id="hero" className="center disable-selection">
       <main className="hero-main">
-        <h1 className="title">
-          <span className="gretting">{languageData.homeTitleGretting}</span>{" "}
-          <span>
-            <HomeTitleTypewriter />
-          </span>
-        </h1>
-        <ButtonResume className="btn-resume" text={languageData.buttonResume} />
+        <div>
+          <h1 className="title">
+            <span className="gretting">{languageData.homeTitleGretting}</span>{" "}
+            <span>
+              <HomeTitleTypewriter />
+            </span>
+          </h1>
+          <ButtonResume
+            className="btn-resume"
+            text={languageData.buttonResume}
+          />
+        </div>
         <div className="hero-icons">
           <ProfilesIcons />
         </div>

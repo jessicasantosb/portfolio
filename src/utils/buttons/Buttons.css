@@ -101,7 +101,7 @@
 .light-theme .btn:hover {
   background: var(--clr-accent-light);
   color: var(--clr-bg-light);
-  box-shadow: 0 0 30px 5px var(--clr-accent-light);
+  box-shadow: none;
 }
 .light-theme .btn-icon {
   fill: var(--clr-accent-light);

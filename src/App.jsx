@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Loader from "./components/hero/loader/Loader";
+import Loader from "./components/loader/Loader";
 import FadeInAnimation from "./utils/FadeInAnimation";
 import ScrollTop from "./utils/scrollTop/ScrollTop";
 import Header from "./components/header/Header";

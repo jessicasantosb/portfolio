@@ -47,14 +47,14 @@ function Footer() {
 
     gsap.fromTo(
       ".footer-copyright",
-      { x: -1500 },
+      { y: "200px" },
       {
-        x: 0,
+        y: 0,
         duration: 2,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "bottom 100",
+          start: "bottom",
           toggleActions: "play none none reverse",
         },
       }

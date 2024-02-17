@@ -39,7 +39,6 @@ function ButtonBack({ text }) {
 
   const handleBtnBackClick = () => {
     navigate("/");
-    console.log("back");
   };
 
   return (

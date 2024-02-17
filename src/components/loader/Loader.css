@@ -12,12 +12,14 @@
   width: 100%;
   top: 0;
   display: flex;
+  gap: 0;
 }
 .blinder {
   height: 100dvh;
   flex: 1;
   transform-origin: top;
-  background-color: var(--clr-bg-light);
+  background-color: var(--clr-secondary-dark);
+  border: 1px solid var(--clr-bg-dark);
 }
 .loader .logo {
   position: absolute;
@@ -31,7 +33,7 @@
 }
 .loader .logo path {
   fill-opacity: 0;
-  stroke: var(--clr-secondary-dark);
+  stroke: var(--clr-text-dark);
   stroke-width: 2;
   stroke-dasharray: 870;
   stroke-dashoffset: 870;
@@ -45,9 +47,10 @@
 }
 
 /* light theme */
-.light-theme .loader svg path {
-  stroke: var(--clr-secondary-light);
-}
 .light-theme .blinder {
-  background-color: var(--clr-bg-dark);
+  background-color: var(--clr-secondary-light);
+  border: 1px solid var(--clr-bg-light);
+}
+.light-theme .loader svg path {
+  stroke: var(--clr-text-light);
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import "./Loader.css";
-import Logo from "../../../utils/Logo";
+import Logo from "../../utils/Logo";
 
 function Loader() {
   useEffect(() => {

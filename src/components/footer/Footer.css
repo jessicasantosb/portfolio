@@ -1,10 +1,10 @@
 /* dark theme */
 #footer {
   position: relative;
-  bottom: 0;
   background-color: var(--clr-bg-dark);
   padding-inline: 20%;
   padding-block: var(--spacer-md);
+  overflow: hidden;
 }
 .footer-links {
   display: flex;
