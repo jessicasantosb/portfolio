@@ -1,0 +1,114 @@
+#error {
+  height: 100dvh;
+  width: 100%;
+}
+.error-container {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--clr-bg-dark);
+  background: -moz-linear-gradient(
+    -45deg,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark),
+    var(--clr-secondary20-dark)
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, var(--clr-primary-dark)),
+    color-stop(51%, var(--clr-secondary-dark)),
+    color-stop(100%, var(--clr-secondary20-dark))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark),
+    var(--clr-secondary20-dark)
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark),
+    var(--clr-secondary20-dark)
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark),
+    var(--clr-secondary20-dark)
+  );
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary-dark),
+    var(--clr-secondary-dark),
+    var(--clr-secondary20-dark)
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cebc9b', endColorstr='#2a1f19', GradientType=1 );
+}
+.error-title {
+  display: flex;
+  font-size: clamp(12rem, 100%, 18rem);
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+.error-title p {
+  transform: rotate(20deg);
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.error-subtitle {
+  text-transform: uppercase;
+  font-size: var(--fs-large);
+  padding-bottom: var(--spacer-lg);
+}
+
+/* light theme */
+.light-theme .error-container {
+  color: var(--clr-bg-light);
+  background: var(--clr-bg-light);
+  background: -moz-linear-gradient(
+    -45deg,
+    var(--clr-bg-light),
+    var(--clr-secondary-light),
+    var(--clr-accent-light)
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, var(--clr-bg-light)),
+    color-stop(51%, var(--clr-secondary-light)),
+    color-stop(100%, var(--clr-accent-light))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--clr-bg-light),
+    var(--clr-secondary-light),
+    var(--clr-accent-light)
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    var(--clr-bg-light),
+    var(--clr-secondary-light),
+    var(--clr-accent-light)
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    var(--clr-bg-light),
+    var(--clr-secondary-light),
+    var(--clr-accent-light)
+  );
+  background: linear-gradient(
+    135deg,
+    var(--clr-bg-light),
+    var(--clr-secondary-light),
+    var(--clr-accent-light)
+  );
+}

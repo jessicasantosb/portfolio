@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "./App.css";
 import ThemeContextWrapper from "./contexts/ThemeContextWrapper.jsx";
 import { LanguageProvider } from "./contexts/LanguageContext.jsx";
-import ErrorPage from "./routes/ErrorPage.jsx";
+import ErrorPage from "./routes/error/ErrorPage.jsx";
 import Resume from "./routes/resume/Resume.jsx";
 
 const router = createBrowserRouter([

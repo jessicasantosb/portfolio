@@ -88,6 +88,8 @@
   fill: var(--clr-accent-dark);
 }
 
+/* error button */
+
 /* light theme */
 .light-theme .btn {
   background: var(--clr-bg-light);
