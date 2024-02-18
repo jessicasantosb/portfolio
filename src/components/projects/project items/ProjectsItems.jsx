@@ -68,7 +68,6 @@ function ProjectsItems() {
     <div>
       {projects.map((project, i) => (
         <div className="project-card center" key={i}>
-          <div className="dots"></div>
           <h2 className="project-item-title">{project.title}</h2>
           <ul className="tags disable-selection">
             {project.tags.map((tag, i) => (

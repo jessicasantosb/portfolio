@@ -12,14 +12,12 @@
   width: 100%;
   top: 0;
   display: flex;
-  gap: 0;
 }
 .blinder {
   height: 100dvh;
   flex: 1;
   transform-origin: top;
   background-color: var(--clr-secondary-dark);
-  border: 1px solid var(--clr-bg-dark);
 }
 .loader .logo {
   position: absolute;
@@ -49,7 +47,6 @@
 /* light theme */
 .light-theme .blinder {
   background-color: var(--clr-secondary-light);
-  border: 1px solid var(--clr-bg-light);
 }
 .light-theme .loader svg path {
   stroke: var(--clr-text-light);

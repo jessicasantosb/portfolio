@@ -13,19 +13,20 @@
   border-radius: var(--br);
   text-align: center;
 }
-.dots {
+.project-card::before {
+  content: '';
   position: absolute;
-  z-index: -1;
+  top: 5px;
   height: 100%;
-  width: 7%;
-  bottom: 0;
-  right: 0;
-  background-image: radial-gradient(
-    var(--clr-text-dark) 25px,
-    transparent 25px
-  );
-  background-size: 84px 84px;
+  width: 0;
   opacity: 0.1;
+  border-right: 45px dotted;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  z-index: -1; 
+}
+.project-card::before {
+  right: 5px;
 }
 .project-card:nth-child(1) {
   background-color: var(--clr-primary-dark);

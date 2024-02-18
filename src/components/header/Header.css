@@ -111,7 +111,7 @@
 .light-theme .navbar .logo path {
   fill: var(--clr-text-light);
 }
-.light-theme .navbar:hover .logo path {
+.light-theme .navbar .logo:hover path {
   stroke: var(--clr-secondary-light);
 }
 .light-theme .nav-link {
@@ -136,7 +136,6 @@
     padding-inline: 5%;
   }
   .navbar {
-    justify-content: space-between;
     flex-direction: row-reverse;
   }
   /* dropdown icon  */
@@ -182,7 +181,7 @@
   /* links */
   .nav-links {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     min-height: 40vh;
     left: 0;
     top: 0;
@@ -199,6 +198,7 @@
   .nav-links ul {
     flex-direction: column;
     margin-block: var(--spacer-lg);
+    padding: 0;
   }
   .nav-links ul:nth-child(2) {
     flex-direction: column-reverse;

@@ -19,12 +19,11 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
-        duration: 2,
-        ease: "power1.inOut",
+        duration: 1.5,
+        ease: "power1.in",
         scrollTrigger: {
           trigger: footerRef.current,
           start: "bottom 100",
-          toggleActions: "play none none reverse",
         },
       }
     );
@@ -35,12 +34,11 @@ function Footer() {
       {
         x: 0,
         opacity: 1,
-        duration: 2,
-        ease: "power1.inOut",
+        duration: 1.5,
+        ease: "power1.in",
         scrollTrigger: {
           trigger: footerRef.current,
           start: "bottom 100",
-          toggleActions: "play none none reverse",
         },
       }
     );
@@ -51,11 +49,10 @@ function Footer() {
       {
         y: 0,
         duration: 2,
-        ease: "power1.inOut",
+        ease: "power1.in",
         scrollTrigger: {
           trigger: footerRef.current,
           start: "bottom",
-          toggleActions: "play none none reverse",
         },
       }
     );

@@ -6,6 +6,9 @@
   padding-block: var(--spacer-md);
   overflow: hidden;
 }
+#footer > * {
+  overflow: hidden;
+}
 .footer-links {
   display: flex;
   justify-content: space-between;

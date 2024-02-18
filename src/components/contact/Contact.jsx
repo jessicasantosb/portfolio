@@ -32,12 +32,11 @@ function Contact() {
         opacity: 1,
         duration: 2,
         stagger: 0.4,
-        ease: "power3.out",
+        ease: "power3.inOut",
         scrollTrigger: {
           trigger: contactRef.current,
           start: "top 200",
           end: "bottom",
-          toggleActions: "play none none reverse",
         },
       }
     );
