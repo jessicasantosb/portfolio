@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Contact.css";
 import { TitleTypewriter } from "../../utils/TitleTypewriter";
@@ -36,7 +36,7 @@ function Contact() {
         scrollTrigger: {
           trigger: contactRef.current,
           start: "top 200",
-          end: "bottom",
+          // end: "bottom",
         },
       }
     );

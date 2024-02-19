@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Footer.css";
 import { LanguageContext } from "../../contexts/LanguageContext";

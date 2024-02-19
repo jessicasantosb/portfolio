@@ -6,18 +6,12 @@
   padding-block: var(--spacer-md);
   overflow: hidden;
 }
-#footer > * {
-  overflow: hidden;
-}
 .footer-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--spacer);
   padding-block: var(--spacer-lg);
-  transform: translate(0px, 0px);
-  scale: 1;
-  opacity: 1;
 }
 .footer-links li {
   list-style: none;
@@ -28,11 +22,6 @@
 }
 .footer-link:hover {
   color: var(--clr-primary-dark);
-}
-.footer-icons {
-  transform: translate(0px, 0px);
-  scale: 1;
-  opacity: 1;
 }
 .footer-icons div {
   display: flex;
@@ -45,8 +34,6 @@
 .footer-copyright {
   text-align: center;
   padding-block: var(--spacer-md);
-  transform: translate(0px, 0px);
-  scale: 1;
 }
 .shadow {
   position: absolute;
