@@ -44,10 +44,10 @@ function Resume() {
   };
 
   return (
-    <section id="resume" className="center disable-selection">
+    <section id="resume" className="disable-selection">
       <nav className="resume-navbar center">
-        <div>
           <ButtonBack text={languageData.buttonBack} />
+        <div>
           <ThemeToggle />
           <LanguageToggle />
         </div>

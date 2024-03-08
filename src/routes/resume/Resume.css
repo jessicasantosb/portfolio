@@ -1,8 +1,9 @@
 #resume {
-  min-height: 100dvh;
-  width: 100%;
+  width: 100vw;
   padding: 5%;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  justify-content: center;
   background-color: var(--clr-bg-dark);
   overflow-y: scroll;
 }
@@ -19,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 /* resume content */
@@ -35,6 +36,14 @@
   line-height: 1.25rem;
   background-color: white;
   color: black;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 800px) {
+  .resume-container {
+    position: absolute;
+    top: 400px;
+    left: 0;
+  }
 }
 strong {
   display: inline-block;
@@ -48,7 +57,7 @@ strong {
   line-height: 2.75rem;
 }
 .resume-name {
-  font-size: 3.10rem;
+  font-size: 3.1rem;
   letter-spacing: -4px;
 }
 
@@ -73,7 +82,8 @@ strong {
 .resume-main div ul li p:nth-child(2) {
   font-style: italic;
 }
-.resume-main div ul li p:nth-child(3), .resume-contact ul li:nth-child(5) {
+.resume-main div ul li p:nth-child(3),
+.resume-contact ul li:nth-child(5) {
   color: hsl(0, 0%, 0%, 70%);
   letter-spacing: -1px;
 }
@@ -100,7 +110,8 @@ strong {
   align-items: center;
   gap: 5px;
 }
-.resume-skills ul, .resume-languages ul {
+.resume-skills ul,
+.resume-languages ul {
   padding-left: 30px;
 }
 .resume-skills ul:nth-child(3) {
