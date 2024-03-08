@@ -6,8 +6,8 @@ export default function ToggleBtn(props) {
    const link = document.querySelector("link[rel='icon']")
 
    props.isDark ?
-    link.setAttribute("href", "./src/assets/favicon-dark-theme.png") 
-    : link.setAttribute("href", "./src/assets/favicon-light-theme.png")
+    link.setAttribute("href", "./darkFavicon.ico") 
+    : link.setAttribute("href", "./lightFavicon.ico")
    
     return (
       <div>
