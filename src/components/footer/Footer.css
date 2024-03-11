@@ -19,6 +19,7 @@
 .footer-link {
   text-decoration: none;
   color: var(--clr-text-dark);
+  opacity: 1;
 }
 .footer-link:hover {
   color: var(--clr-primary-dark);
