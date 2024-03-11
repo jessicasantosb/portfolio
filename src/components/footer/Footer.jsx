@@ -20,12 +20,12 @@ function Footer() {
         y: 0,
         x: 0,
         opacity: 1,
-        duration: 2,
+        duration: 1,
         stagger: 0.4,
         ease: "power3.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "top top",
+          start: "bottom",
         },
       }
     );
