@@ -36,7 +36,6 @@ function Contact() {
         scrollTrigger: {
           trigger: contactRef.current,
           start: "top 200",
-          // end: "bottom",
         },
       }
     );
