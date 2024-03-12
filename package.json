@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@studio-freight/react-lenis": "^0.0.45",
     "gsap": "^3.12.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",

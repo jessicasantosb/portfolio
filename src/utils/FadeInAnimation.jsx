@@ -10,7 +10,7 @@ function FadeInAnimation() {
     const fadeElements = document.querySelectorAll(".fade-in");
 
     fadeElements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 100, duration: 1 });
+      gsap.set(element, { opacity: 0, y: 50, duration: 1 });
 
       gsap.to(element, {
         opacity: 1,
@@ -18,7 +18,7 @@ function FadeInAnimation() {
         duration: 1,
         scrollTrigger: {
           trigger: element,
-          start: "top 500",
+          start: "top 700",
           end: "bottom",
           toggleActions: "play none none reverse",
         },
