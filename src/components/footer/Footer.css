@@ -19,7 +19,6 @@
 .footer-link {
   text-decoration: none;
   color: var(--clr-text-dark);
-  opacity: 1 !important;
 }
 .footer-link:hover {
   color: var(--clr-primary-dark);
@@ -41,7 +40,7 @@
 .shadow {
   width: 100px;
   height: 5px;
-  transition: 0.4s; 
+  transition: 0.4s;
   border-radius: 100%;
   background: linear-gradient(
     to right,

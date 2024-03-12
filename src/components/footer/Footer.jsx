@@ -25,7 +25,7 @@ function Footer() {
         ease: "power3.inOut",
         scrollTrigger: {
           trigger: footerRef.current,
-          start: "bottom",
+          start: "bottom bottom",
         },
       }
     );
