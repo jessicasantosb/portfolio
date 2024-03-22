@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
-import SmoothScrolling from "../../utils/SmoothScrolling";
 import { TitleTypewriter } from "../../utils/TitleTypewriter";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ProjectsItems from "./project items/ProjectsItems";
@@ -69,9 +68,7 @@ function Projects() {
         </p>
       </div>
       <div className="projects-div">
-        <SmoothScrolling>
-          <ProjectsItems />
-        </SmoothScrolling>
+        <ProjectsItems />
       </div>
     </section>
   );
