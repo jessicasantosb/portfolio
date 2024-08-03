@@ -1,11 +1,10 @@
-.sun-icon, .moon-icon {
+.toggle-icon {
     cursor: pointer;
-    font-size: var(--fs-medium);
-    transition: all 1s ease-out;
+    font-size: var(--fs-tiny);
 }
-.sun-icon:hover, .moon-icon:hover {
+.toggle-icon:hover {
     color: var(--clr-accent-dark);
 }
-.light-theme .sun-icon:hover, .light-theme .moon-icon:hover {
+.light-theme .toggle-icon:hover {
     color: var(--clr-accent-light);
 }

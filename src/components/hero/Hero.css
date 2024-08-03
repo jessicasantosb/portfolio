@@ -3,6 +3,7 @@
   width: 100%;
   height: 100dvh;
 }
+
 .hero-main {
   position: fixed;
   bottom: 0;
@@ -14,30 +15,36 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .gretting {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary-dark),
-    var(--clr-accent-dark)
-  );
+  background: linear-gradient(to right,
+      var(--clr-primary-dark),
+      var(--clr-accent-dark));
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  font-size: clamp(1.8rem, 0.95vw + 1.75rem, 2.5rem);
 }
+
 .hero-main .title {
+  font-size: clamp(1.8rem, 0.95vw + 1.75rem, 2.5rem);
   text-align: left;
   letter-spacing: -3px;
 }
+
 .btn.resume {
   margin-top: var(--spacer-md);
 }
+
 .hero-icons {
   padding-block: var(--spacer-lg);
 }
+
 .hero-icons #profile-icons {
   display: flex;
   gap: var(--spacer);
 }
+
 .hero-img-box {
   width: 50%;
   height: 60dvh;
@@ -45,17 +52,21 @@
   bottom: 0;
   right: 0;
 }
+
 .hero-svg path {
   fill: var(--clr-secondary-dark);
 }
+
 .hero-avatar,
 .hero-svg {
   position: absolute;
 }
+
 .hero-avatar {
   height: 100%;
   right: 30%;
 }
+
 .hero-svg {
   height: 120%;
   bottom: 0;
@@ -63,10 +74,12 @@
   /* animation: float 4s ease-in-out infinite alternate; */
   /* overflow: hidden; */
 }
+
 @keyframes float {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(20px);
   }
@@ -74,15 +87,14 @@
 
 /* light theme */
 .light-theme .gretting {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary-light),
-    var(--clr-accent-light)
-  );
+  background: linear-gradient(to right,
+      var(--clr-primary-light),
+      var(--clr-accent-light));
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
+
 .light-theme .hero-svg path {
   fill: var(--clr-primary-light);
 }
@@ -91,37 +103,46 @@
   .hero-main {
     height: 80dvh;
   }
+
   .hero-icons {
     padding-top: 0;
     width: 5%;
   }
+
   .hero-icons #profile-icons {
     flex-direction: column;
     gap: 0;
   }
+
   .btn.resume {
     margin-bottom: 15px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .hero-main {
     padding-inline: 5%;
   }
+
   .hero-img-box {
     height: 45dvh;
   }
+
   .hero-avatar {
     right: 20%;
   }
+
   .hero-svg {
     right: 5%;
   }
 }
+
 @media screen and (max-width: 950px) {
   .hero-main .title {
     height: calc(var(--fs-large) * 3.5);
   }
 }
+
 @media screen and (max-width: 600px) {
   .hero-img-box {
     height: 35dvh;

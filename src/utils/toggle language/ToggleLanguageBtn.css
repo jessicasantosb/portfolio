@@ -3,15 +3,14 @@
   background-color: var(--clr-bg-dark);
   color: var(--clr-text-dark);
   border: none;
-  font-size: var(--fs-small);
+  font-size: var(--fs-tiny);
   cursor: pointer;
-  transition: all 1s ease-out;
 }
 .language-btn.isActive {
   color: var(--clr-accent-dark);
 }
 .language-btn:first-child {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 /* light theme */

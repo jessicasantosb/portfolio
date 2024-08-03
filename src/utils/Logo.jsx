@@ -1,10 +1,8 @@
-import React from "react";
-
 function Logo() {
   return (
     <svg
       className="logo"
-      viewBox="0 0 112.95 70"
+      viewBox="0 0 120 75"
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* letter J and B, font family Tourney */}

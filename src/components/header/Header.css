@@ -25,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  gap: 1rem;
 }
 .nav-links ul {
   display: flex;
@@ -37,8 +38,7 @@
 }
 /* logo */
 .navbar .logo {
-  max-width: var(--fs-large);
-  max-height: var(--fs-large);
+  max-width: calc(var(--header-height) - 1rem);
 }
 .navbar .logo path {
   fill: var(--clr-text-dark);
@@ -93,11 +93,9 @@
 }
 .progressMainStyle {
   height: 5px;
-  background: linear-gradient(
-    to right,
-    var(--clr-primary-dark),
-    var(--clr-secondary-dark)
-  );
+  background: linear-gradient(to right,
+      var(--clr-primary-dark),
+      var(--clr-secondary-dark));
   width: 15%;
 }
 
@@ -124,11 +122,9 @@
   background-color: var(--clr-secondary-light);
 }
 .light-theme .progressMainStyle {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary-light),
-    var(--clr-secondary-light)
-  );
+  background: linear-gradient(to right,
+      var(--clr-primary-light),
+      var(--clr-secondary-light));
 }
 
 @media screen and (max-width: 1200px) {
@@ -186,7 +182,6 @@
     left: 0;
     top: 0;
     flex-direction: column;
-    transition: all 1s ease-out;
     pointer-events: none;
     z-index: 4;
     box-shadow: var(--clr-bg-dark) 0px 13px 27px -5px,
@@ -206,7 +201,6 @@
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1500px at 90% -10%);
-    pointer-events: all;
   }
   /* light theme */
   .light-theme .line {

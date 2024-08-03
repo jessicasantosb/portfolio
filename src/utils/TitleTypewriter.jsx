@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Typewriter from "typewriter-effect";
 import { LanguageContext } from "../contexts/LanguageContext";
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./Footer.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ProfilesIcons from "../../utils/profile icons/ProfilesIcons";

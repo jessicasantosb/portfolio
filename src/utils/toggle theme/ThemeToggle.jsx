@@ -8,7 +8,7 @@ function Theme() {
   const [darkMode, setDarkMode] = useState(savedTheme === Themes.dark);
 
   return (
-    <section>
+    <>
       <ThemeContext.Consumer>
         {({ changeTheme }) => (
           <ToggleBtn
@@ -25,7 +25,7 @@ function Theme() {
           />
         )}
       </ThemeContext.Consumer>
-    </section>
+    </>
   );
 }
 

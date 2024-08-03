@@ -2,9 +2,9 @@
 .btn {
   cursor: pointer;
   position: relative;
-  width: 240px;
-  padding-block: 15px;
-  padding-inline: 20px;
+  width: 200px;
+  padding-block: 10px;
+  padding-inline: 5px;
   background: var(--clr-bg-dark);
   color: var(--clr-accent-dark);
   text-transform: uppercase;
@@ -12,7 +12,6 @@
   font-weight: bold;
   border-radius: var(--br);
   border: 1px solid var(--clr-accent-dark);
-  transition: all 0.35s;
   gap: 15px;
   overflow: hidden;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./About.css";
 import { TitleTypewriter } from "../../utils/TitleTypewriter";
 import { LanguageContext } from "../../contexts/LanguageContext";
