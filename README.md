@@ -6,6 +6,15 @@ Bem-vindo ao meu portfólio! Explore uma coleção dos meus projetos e saiba mai
 [English]
 Welcome to my portfolio! Explore a collection of my projects and learn more about me. Enjoy browsing through my work and getting to know me better.
 
+## Getting Started
+
+Para começar no Portfolio, siga estes passos:
+
+1. Clonar o repositório: **`git clone https://github.com/jessicasantosb/portfolio.git`**
+2. Entrar na pasta do projeto: **`cd portfolio`**
+3. Instalar as dependências: **`npm i`**
+4. Iniciar o aplicativo: **`npm run dev`**
+
 ## Live Demo
 
 [Português]
@@ -18,7 +27,7 @@ Check out the live demo:
 
 ## Screenshot
 
-![Home Page]()
+![Home Page](src/assets/screenshot.png)
 
 ## Technology Stack
 
