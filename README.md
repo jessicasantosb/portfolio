@@ -23,7 +23,7 @@ Confira a demonstração ao vivo:
 [English]
 Check out the live demo:
 
-[Live Preview](https://portfolio-jessicasantosb.vercel.app/)
+[Live Preview](https://jessicabandeira.vercel.app/)
 
 ## Screenshot
 
