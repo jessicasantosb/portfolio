@@ -11,7 +11,7 @@ export function Header() {
       </Link>
       <Link
         href={"/"}
-        className="uppercase tracking-tighter text-lg md:text-xl underline-offset-4 hover:underline"
+        className="uppercase tracking-tighter text-md md:text-lg underline-offset-4 hover:underline"
       >
         Contato
       </Link>
