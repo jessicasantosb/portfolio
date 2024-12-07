@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Playfair_Display, Source_Serif_4 } from "next/font/google";
@@ -14,7 +15,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Jessica Bandeira",
+  title: "JESSICA BANDEIRA",
   description:
     "Sou a Jessica! Aqui você encontra todos os links importantes e maneiras de entrar em contato comigo de forma rápida e fácil.",
   icons: {
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${playfairDisplay.className} ${sourceSerif.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
