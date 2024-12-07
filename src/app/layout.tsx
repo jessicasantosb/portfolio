@@ -1,13 +1,8 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Serif_4 } from "next/font/google";
+import { Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair-display",
-});
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -30,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${playfairDisplay.className} ${sourceSerif.className}`}>
+      <body className={sourceSerif.className}>
         <Header />
         {children}
         <Footer />
