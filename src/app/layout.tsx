@@ -1,12 +1,12 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
-import { Source_Serif_4 } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const sourceSerif = Source_Serif_4({
+const josefinSans = Josefin_Sans({
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-josefin-sans",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={sourceSerif.className}>
+      <body className={josefinSans.className}>
         <Header />
         {children}
         <Footer />

@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sourceSerif: "var(--font-source-serif)",
+        josefinSans: "var(--font-josefin-sans)",
       },
     },
   },

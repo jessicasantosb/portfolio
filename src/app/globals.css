@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#f6f6f6] font-sourceSerif;
+  @apply bg-[#f6f6f6] font-josefinSans;
 }
