@@ -10,7 +10,7 @@ export function Header() {
         Jessica Bandeira
       </Link>
       <Link
-        href={"/"}
+        href={"/contact"}
         className="uppercase tracking-tighter text-md md:text-lg underline-offset-4 hover:underline"
       >
         Contato
