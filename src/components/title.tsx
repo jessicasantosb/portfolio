@@ -1,6 +1,6 @@
 export function HomeTitle({ text }: { text: string }) {
   return (
-    <h1 className="text-[13vw] lg:text-[10vw] self-start font-black tracking-[-3.5px] md:tracking-[-7px] lg:tracking-[-10px] leading-none text-nowrap">
+    <h1 className="text-[11vw] lg:text-[9vw] uppercase font-black tracking-[-5px] sm:tracking-[-9px] md:tracking-[-10px] text-nowrap">
       {text}
     </h1>
   );
