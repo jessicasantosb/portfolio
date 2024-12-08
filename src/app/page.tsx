@@ -26,7 +26,7 @@ export default function Home() {
       </div>
 
       <div className="text-right sm:text-left sm:-mt-5 md:-mt-10 select-none">
-        <HomeTitle text="& Freelance" />
+        <HomeTitle text="& Freelancer" />
       </div>
     </section>
   );
