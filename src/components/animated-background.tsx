@@ -63,7 +63,7 @@ export const AnimatedBackground: React.FC = () => {
     render(0);
 
     // Cleanup on component unmount
-    return () => {     
+    return () => {
       window.removeEventListener("resize", resize);
       renderer.dispose();
       geometry.dispose();
@@ -75,7 +75,7 @@ export const AnimatedBackground: React.FC = () => {
     <div className="relative w-full h-[8vh] lg:h-[16vh] overflow-hidden">
       <canvas
         ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute -top-28 lg:-top-64 left-0 h-full"
       ></canvas>
     </div>
   );
