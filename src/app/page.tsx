@@ -10,7 +10,7 @@ export default function Home() {
 
       <div className="flex justify-center flex-col lg:flex-row lg:items-center lg:gap-8">
         <HomeTitle text="Jéssica Bandeira" />
-        <p className="max-w-96 lg:-mt-4 lg:w-64 text-[0.7em] tracking-wide leading-4">
+        <p className="max-w-[25rem] lg:-mt-4 lg:w-64 text-[0.7em] tracking-wide leading-4">
           Olá! Sou uma <span className="italic">desenvolvedora Web</span>{" "}
           especializada em{" "}
           <span className="underline underline-offset-2">Frontend</span>,
