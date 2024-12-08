@@ -9,12 +9,16 @@ const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
 });
 
+
 export const metadata: Metadata = {
-  title: "JESSICA BANDEIRA",
+  title: {
+    default: "JESSICA BANDEIRA",
+    template: "JESSICA BANDEIRA | %s",
+  },
   description:
-    "Sou a Jessica! Aqui você encontra todos os links importantes e maneiras de entrar em contato comigo de forma rápida e fácil.",
+    "Sou a Jessica! Desenvolvedora Web especializada em Frontend, dedicada em unir arte e funcionalidades para criar experiências digitais incríveis.",
   icons: {
-    icon: "/favicon.jpg",
+    icon: "/favicon.png",
   },
 };
 
