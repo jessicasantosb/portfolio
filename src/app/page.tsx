@@ -21,11 +21,11 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="text-right lg:-mt-10">
+      <div className="text-right lg:-mt-10 select-none">
         <HomeTitle text="Dev Frontend" />
       </div>
 
-      <div className="-mt-5 md:-mt-10">
+      <div className="-mt-5 md:-mt-10 select-none">
         <HomeTitle text="& Freelance" />
       </div>
     </section>

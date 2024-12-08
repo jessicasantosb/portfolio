@@ -5,3 +5,8 @@
 body {
   @apply bg-[#f6f6f6] font-josefinSans;
 }
+
+::selection {
+  background-color: #a888b5;
+  color: #ffff;
+}
