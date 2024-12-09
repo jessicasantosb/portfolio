@@ -3,14 +3,14 @@ import { HomeTitle } from "@/components/title";
 
 export default function Home() {
   return (
-    <section className="w-full h-full py-20 px-4 md:px-8 bg-transparent">
+    <section className="max-w-6xl h-full mx-auto py-16 px-4 md:px-8 bg-transparent">
       <div className="absolute top-0 right-0 h-screen w-full -z-20 opacity-25">
         <AnimatedBackground />
       </div>
 
       <div className="flex justify-center flex-col lg:flex-row lg:items-center lg:gap-8">
         <HomeTitle text="Jéssica Bandeira" />
-        <p className="max-w-[25rem] pt-2 pb-4 sm:p-0 lg:-mt-4 lg:w-64 text-[0.7em] tracking-wide leading-4">
+        <p className="max-w-[25rem] pt-2 pb-4 sm:p-0 lg:-mt-4 lg:w-64 text-[0.7em] font-light tracking-wide leading-4">
           Olá! Sou uma <span className="italic">desenvolvedora Web</span>{" "}
           especializada em{" "}
           <span className="underline underline-offset-2">Frontend</span>,
