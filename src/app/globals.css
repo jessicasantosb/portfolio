@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#f6f6f6] font-josefinSans font-thin;
+  @apply bg-[#f0f0f0] font-josefinSans font-thin;
 }
 
 ::selection {
