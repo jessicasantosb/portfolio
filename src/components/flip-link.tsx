@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-const DURATION = 0.25;
-const STAGGER = 0.025;
+const DURATION = 0.35;
+const STAGGER = 0.035;
 
 type Props = {
   children: string;
@@ -15,9 +15,9 @@ export const FlipLink = ({ children, href }: Props) => {
       whileHover="hovered"
       href={href}
       target="_blank"
-      className="relative block overflow-hidden whitespace-nowrap font-sans font-black uppercase text-[8vh] sm:text-[14vw] text-[#A888B5]"
+      className="relative block h-full overflow-hidden whitespace-nowrap font-black uppercase text-[9vh] sm:text-[14vw] text-[#A888B5] tracking-[-5px] sm:tracking-normal"
       style={{
-        lineHeight: 0.8,
+        lineHeight: 1.1,
       }}
     >
       {children && (

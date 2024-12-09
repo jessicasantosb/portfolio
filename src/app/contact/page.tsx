@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <section className="w-full min-h-[80vh] py-20 px-4">
+    <section className="w-full min-h-[80vh] pt-20 pb-32 px-2">
       <RevealLinks />
     </section>
   );

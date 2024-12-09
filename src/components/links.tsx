@@ -4,7 +4,7 @@ import { FlipLink } from "./flip-link";
 
 export const RevealLinks = () => {
   return (
-    <section className="grid place-content-center gap-2">
+    <section className="w-full bg-red-300 grid place-content-center gap-4 sm:gap-2">
       <FlipLink
         href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
       >
