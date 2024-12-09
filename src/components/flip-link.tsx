@@ -15,7 +15,7 @@ export const FlipLink = ({ children, href }: Props) => {
       whileHover="hovered"
       href={href}
       target="_blank"
-      className="relative block h-full overflow-hidden whitespace-nowrap font-black uppercase text-[9vh] sm:text-[14vw] text-[#A888B5] tracking-[-5px] sm:tracking-normal"
+      className="relative block h-full overflow-hidden whitespace-nowrap uppercase text-[9vh] sm:text-[14vw] text-[#A888B5] tracking-[-5px] sm:tracking-normal"
       style={{
         lineHeight: 1.1,
       }}
