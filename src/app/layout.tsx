@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`h-full w-full flex flex-col justify-between ${josefinSans.className}`}>
+      <body
+        className={`min-h-dvh w-full flex flex-col justify-between ${josefinSans.className}`}
+      >
         <Header />
         {children}
         <Footer />
