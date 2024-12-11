@@ -1,7 +1,6 @@
-"use client";
+import { Variants } from "motion/react";
 
-import { motion, Variants } from "motion/react";
-
+import { MotionP } from "../shared/motion";
 import { HomeTitle } from "./title";
 
 const pVariants: Variants = {
@@ -23,9 +22,9 @@ export function Hero() {
   return (
     <>
       <div className="flex justify-center flex-col lg:flex-row lg:items-center lg:gap-8">
-        <HomeTitle dir="-100%" text="Jéssica Bandeira" />
+        <HomeTitle dir="-100%">Jéssica Bandeira</HomeTitle>
         <div className="overflow-hidden py-1 md:py-4">
-          <motion.p
+          <MotionP
             initial="hidden"
             animate="visible"
             variants={pVariants}
@@ -38,16 +37,16 @@ export function Hero() {
             funcionalidades para criar{" "}
             <span className="text-[#a855f7]">experiências digitais</span>{" "}
             incríveis.
-          </motion.p>
+          </MotionP>
         </div>
       </div>
 
       <div className="text-right lg:-mt-10 select-none">
-        <HomeTitle dir="100%" text="Dev Frontend" />
+        <HomeTitle dir="100%">Dev Frontend</HomeTitle>
       </div>
 
       <div className="text-right sm:text-left sm:-mt-5 md:-mt-10 select-none">
-        <HomeTitle dir="-100%" text="& Freelancer" />
+        <HomeTitle dir="-100%">& Freelancer</HomeTitle>
       </div>
     </>
   );

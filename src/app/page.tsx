@@ -1,5 +1,5 @@
-import { AnimatedBackground } from "@/components/animated-background";
-import { Hero } from "@/components/hero";
+import { AnimatedBackground } from "@/components/home/animated-background";
+import { Hero } from "@/components/home/hero";
 
 export default function Home() {
   return (
