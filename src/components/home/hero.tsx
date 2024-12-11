@@ -1,22 +1,6 @@
-import { Variants } from "motion/react";
-
+import { pVariants } from "../shared/animation-variants";
 import { MotionP } from "../shared/motion";
 import { HomeTitle } from "./title";
-
-const pVariants: Variants = {
-  hidden: {
-    y: "-100%",
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 1.2,
-      duration: 1,
-    },
-  },
-};
 
 export function Hero() {
   return (

@@ -1,20 +1,18 @@
-import { motion } from "framer-motion";
+import { ComponentProps } from "react";
+import { MotionA, MotionSpan } from "./shared/motion";
 
 const DURATION = 0.35;
 const STAGGER = 0.035;
 
-type Props = {
-  children: string;
-  href: string;
-};
+type FlipLinkProps = ComponentProps<typeof MotionA> & { children: string };
 
-export const FlipLink = ({ children, href }: Props) => {
+export const FlipLink = ({ children, ...props }: FlipLinkProps) => {
   return (
-    <motion.a
+    <MotionA
       initial="initial"
       whileHover="hovered"
-      href={href}
       target="_blank"
+      {...props}
       className="relative block h-full overflow-hidden whitespace-nowrap uppercase text-[9vh] sm:text-[14vw] text-[#A888B5] tracking-[-5px] sm:tracking-normal"
       style={{
         lineHeight: 1.1,
@@ -24,7 +22,7 @@ export const FlipLink = ({ children, href }: Props) => {
         <>
           <div>
             {children.split("").map((l, i) => (
-              <motion.span
+              <MotionSpan
                 variants={{
                   initial: {
                     y: 0,
@@ -42,12 +40,12 @@ export const FlipLink = ({ children, href }: Props) => {
                 key={i}
               >
                 {l}
-              </motion.span>
+              </MotionSpan>
             ))}
           </div>
           <div className="absolute inset-0">
             {children.split("").map((l, i) => (
-              <motion.span
+              <MotionSpan
                 variants={{
                   initial: {
                     y: "100%",
@@ -65,11 +63,11 @@ export const FlipLink = ({ children, href }: Props) => {
                 key={i}
               >
                 {l}
-              </motion.span>
+              </MotionSpan>
             ))}
           </div>
         </>
       )}
-    </motion.a>
+    </MotionA>
   );
 };
