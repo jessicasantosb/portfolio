@@ -6,38 +6,43 @@ import * as THREE from "three";
 export const AnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
+  const color = {
+    background: 0xf0f0f0,
+    cube: "#a855f7",
+  };
+
+  const screen = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      screen.width / screen.height,
       0.1,
       1000
     );
 
-    // Create WebGLRenderer
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-    renderer.setClearColor(0xf0f0f0); // Set background color
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(color.background);
+    renderer.setSize(screen.width, screen.height);
 
-    // Cube Geometry and Material with line color set to #a855f7
-    const geometry = new THREE.BoxGeometry(1, 1, 1); // This automatically has an index buffer
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({
-      color: new THREE.Color("#a855f7"), // Set line color to #a855f7 (violet)
+      color: new THREE.Color(color.cube),
       wireframe: true,
     });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    // Camera settings for zooming in
-    camera.position.z = 2; // Closer to the object for zoomed-in effect
-    camera.fov = 40; // Lower FOV for zooming in (larger value for zooming out)
-    camera.updateProjectionMatrix(); // Update the projection matrix for changes to the camera
+    camera.position.z = 2;
+    camera.fov = 40;
+    camera.updateProjectionMatrix();
 
-    // Resize function
     const resize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -46,23 +51,19 @@ export const AnimatedBackground: React.FC = () => {
       camera.updateProjectionMatrix();
     };
 
-    // Animation loop function
     const render = (time: number) => {
-      time *= 0.001; // Convert time to seconds
+      time *= 0.001;
       resize();
       cube.rotation.x = time;
-      cube.rotation.y = time * 0.1; // Rotation speed
+      cube.rotation.y = time * 0.1;
       renderer.render(scene, camera);
       requestAnimationFrame(render);
     };
 
-    // Add event listener for window resizing
     window.addEventListener("resize", resize);
 
-    // Start the render loop
     render(0);
 
-    // Cleanup on component unmount
     return () => {
       window.removeEventListener("resize", resize);
       renderer.dispose();
@@ -73,10 +74,7 @@ export const AnimatedBackground: React.FC = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="absolute top-0 left-0 h-full"
-      ></canvas>
+      <canvas ref={canvasRef} className="absolute top-0 left-0 h-full"></canvas>
     </div>
   );
 };
