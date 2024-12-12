@@ -11,25 +11,20 @@ export const AnimatedBackground: React.FC = () => {
     cube: "#a855f7",
   };
 
-  const screen = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
-
   useEffect(() => {
     if (!canvasRef.current) return;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
-      screen.width / screen.height,
+      window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setClearColor(color.background);
-    renderer.setSize(screen.width, screen.height);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({
@@ -70,7 +65,7 @@ export const AnimatedBackground: React.FC = () => {
       geometry.dispose();
       material.dispose();
     };
-  }, []);
+  }, [color.background, color.cube]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
