@@ -4,8 +4,9 @@ type ProjectsProps = {
   imageUrl: string;
   repositoryUrl: string;
   liveUrl?: string;
-  stacks: string;
+  stacks: string[];
   color: string;
+  iconColor: string;
 };
 
 export const projects: ProjectsProps[] = [
@@ -15,8 +16,9 @@ export const projects: ProjectsProps[] = [
     imageUrl: "/assets/trabalhos-artesanais.png",
     repositoryUrl: "https://github.com/jessicasantosb/trabalhos-artesanais",
     liveUrl: "https://trabalhos-artesanais.vercel.app/",
-    stacks: "react, typescript, firebase, tailwind, jest, eslint",
+    stacks: ["react", "typescript", "firebase", "tailwind", "jest", "eslint"],
     color: "#d8d8d8",
+    iconColor: "#a8a8a8",
   },
   {
     id: 2,
@@ -24,8 +26,9 @@ export const projects: ProjectsProps[] = [
     imageUrl: "/assets/booking-room.png",
     repositoryUrl: "https://github.com/jessicasantosb/booking-room",
     liveUrl: "https://booking-room-jessicasantosb.vercel.app/",
-    stacks: "react, javascript, sass, stripe, nodejs",
+    stacks: ["react", "javascript", "sass", "stripe", "nodejs"],
     color: "#a8a8a8",
+    iconColor: "#d8d8d8",
   },
   {
     id: 3,
@@ -34,17 +37,35 @@ export const projects: ProjectsProps[] = [
     repositoryUrl:
       "https://github.com/jessicasantosb/freelance-entregas-e-fretes",
     liveUrl: "https://barbosa-fretes.vercel.app/",
-    stacks:
-      "nextjs, typescript, tailwind, shadcn, react-hook-form, zod, zustand, motion",
+    stacks: [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "react-hook-form",
+      "zod",
+      "zustand",
+    ],
     color: "#d8d8d8",
+    iconColor: "#a8a8a8",
   },
   {
     id: 4,
     title: "E-commerce",
     imageUrl: "/assets/e-commerce.png",
     repositoryUrl: "https://github.com/jessicasantosb/e-commerce",
-    stacks:
-      "nextjs, typescript, shadcn, tailwind, prisma, react-hook-form, zod, zustand, prisma, cloudinary",
+    stacks: [
+      "nextjs",
+      "typescript",
+      "shadcn",
+      "tailwind",
+      "react-hook-form",
+      "zod",
+      "zustand",
+      "prisma",
+      "cloudinary",
+    ],
     color: "#a8a8a8",
+    iconColor: "#d8d8d8",
   },
 ];

@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
+import { Icons } from "./icons";
+
 type CardProps = {
   i: number;
   title: string;
   imageUrl: string;
   repositoryUrl: string;
   liveUrl?: string;
-  stacks: string;
+  stacks: string[];
   color: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   progress: any;
@@ -58,7 +60,9 @@ export const Card: React.FC<CardProps> = ({
             <h2 className="text-center text-2xl md:text-4xl font-light">
               {title}
             </h2>
-            <p>{stacks}</p>
+
+            <Icons stacks={stacks} />
+
             <div className="flex items-center justify-between gap-4 mt-4 text-lg md:text-xl">
               <Link
                 href={repositoryUrl}
@@ -79,9 +83,19 @@ export const Card: React.FC<CardProps> = ({
             </div>
           </div>
 
-          <div className="relative w-full h-full overflow-hidden rotate-6">
-            <motion.div className="w-full h-full" style={{ scale: imageScale }}>
-              <Image fill src={imageUrl} alt="image" className="object-cover" />
+          <div className="w-full h-full overflow-hidden rotate-6">
+            <motion.div
+              className="w-full h-full relative"
+              style={{ scale: imageScale }}
+            >
+              <Image
+                alt="image"
+                src={imageUrl}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover absolute"
+              />
             </motion.div>
           </div>
         </div>
