@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.27",
     "@types/three": "^0.170.0",
     "motion": "^11.13.5",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "three": "^0.171.0",
-    "@studio-freight/lenis": "^1.0.27"
+    "react-icons": "^5.4.0",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/node": "^20",

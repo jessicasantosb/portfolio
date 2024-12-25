@@ -6,7 +6,6 @@ type ProjectsProps = {
   liveUrl?: string;
   stacks: string[];
   color: string;
-  iconColor: string;
 };
 
 export const projects: ProjectsProps[] = [
@@ -17,8 +16,8 @@ export const projects: ProjectsProps[] = [
     repositoryUrl: "https://github.com/jessicasantosb/trabalhos-artesanais",
     liveUrl: "https://trabalhos-artesanais.vercel.app/",
     stacks: ["react", "typescript", "firebase", "tailwind", "jest", "eslint"],
-    color: "#d8d8d8",
-    iconColor: "#a8a8a8",
+    color:
+      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(216,216,216,1) 35%)",
   },
   {
     id: 2,
@@ -27,8 +26,8 @@ export const projects: ProjectsProps[] = [
     repositoryUrl: "https://github.com/jessicasantosb/booking-room",
     liveUrl: "https://booking-room-jessicasantosb.vercel.app/",
     stacks: ["react", "javascript", "sass", "stripe", "nodejs"],
-    color: "#a8a8a8",
-    iconColor: "#d8d8d8",
+    color:
+      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(194,194,194,1) 30%)",
   },
   {
     id: 3,
@@ -46,8 +45,8 @@ export const projects: ProjectsProps[] = [
       "zod",
       "zustand",
     ],
-    color: "#d8d8d8",
-    iconColor: "#a8a8a8",
+    color:
+      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(216,216,216,1) 35%)",
   },
   {
     id: 4,
@@ -65,7 +64,7 @@ export const projects: ProjectsProps[] = [
       "prisma",
       "cloudinary",
     ],
-    color: "#a8a8a8",
-    iconColor: "#d8d8d8",
+    color:
+      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(194,194,194,1) 30%)",
   },
 ];
