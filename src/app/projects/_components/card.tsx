@@ -1,10 +1,9 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { CiGlobe } from "react-icons/ci";
+import { CiGlobe, CiImageOff } from "react-icons/ci";
 import { IoIosCode } from "react-icons/io";
 
 import { Icons } from "./icons";
@@ -12,11 +11,11 @@ import { Icons } from "./icons";
 type CardProps = {
   i: number;
   title: string;
-  imageUrl: string;
+  description: string;
+  imageUrl?: string;
   repositoryUrl: string;
   liveUrl?: string;
   stacks: string[];
-  color: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   progress: any;
   range: [number, number];
@@ -26,11 +25,11 @@ type CardProps = {
 export const Card: React.FC<CardProps> = ({
   i,
   title,
+  description,
   imageUrl,
   repositoryUrl,
   liveUrl,
   stacks,
-  color,
   progress,
   range,
   targetScale,
@@ -51,24 +50,28 @@ export const Card: React.FC<CardProps> = ({
     >
       <motion.div
         style={{
-          background: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative flex flex-col md:flex-row items-center gap-8 -top-[25%] h-[500px] w-[800px] p-8 md:p-12 origin-top shadow-md"
+        className="relative pt-12 flex items-center gap-8 -top-[25%] h-[500px] w-[1000px] origin-top shadow-md border-2 border-b-4 border-[#A888B5] bg-[#f0f0f0]"
       >
-        <div className="relative h-full w-full md:w-3/5 md:py-8 flex flex-col justify-between gap-4 font-extralight">
-          <h2 className="text-center text-3xl sm:text-5xl font-light tracking-tighter text-[#A888B5]">
-            {title}
-          </h2>
+        <div className="relative h-full md:w-5/6 px-4 md:pl-12 flex flex-col justify-between gap-4 font-extralight">
+          <div>
+            <h2 className="pb-4 text-4xl font-light tracking-tighter text-[#A888B5]">
+              {title}
+            </h2>
+            <p className="text-justify text-xl tracking-wide text-slate-600">
+              {description}
+            </p>
+          </div>
 
           <Icons stacks={stacks} />
 
-          <div className="flex flex-col items-center gap-4 mt-4 text-lg md:text-xl tracking-wider">
+          <div className="py-4 flex items-center justify-center gap-4 text-lg select-none">
             <Link
               href={repositoryUrl}
               target="_blank"
-              className="w-44 p-1 flex gap-2 items-center justify-center bg-[#f0f0f0] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
+              className="w-40 p-1 flex gap-2 items-center justify-center text-slate-600 shadow-md hover:opacity-80 hover:shadow-none hover:scale-95"
             >
               <IoIosCode />
               Veja o Código
@@ -77,7 +80,7 @@ export const Card: React.FC<CardProps> = ({
               <Link
                 href={liveUrl}
                 target="_blank"
-                className="w-44 p-1 flex gap-2 items-center justify-center bg-[#d9bae6] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
+                className="w-40 p-1 flex gap-2 items-center justify-center bg-[#d9bae6] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
               >
                 <CiGlobe />
                 Confira Online
@@ -86,19 +89,22 @@ export const Card: React.FC<CardProps> = ({
           </div>
         </div>
 
-        <div className="w-full h-full mt-4 overflow-hidden rotate-6">
+        <div className="hidden md:block w-full h-full justify-self-end mt-4 md:m-0 overflow-hidden select-none">
           <motion.div
             className="w-full h-full relative"
             style={{ scale: imageScale }}
           >
-            <Image
-              alt="image"
-              src={imageUrl}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-contain absolute"
-            />
+            {imageUrl ? (
+              <div
+                style={{ backgroundImage: `url(${imageUrl})` }}
+                className="w-full h-full absolute"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center gap-2">
+                <CiImageOff className="size-24 opacity-40 text-[#d9bae6]" />
+                <p>em progresso...</p>
+              </div>
+            )}
           </motion.div>
         </div>
       </motion.div>

@@ -1,37 +1,39 @@
 type ProjectsProps = {
   id: number;
   title: string;
-  imageUrl: string;
+  description: string;
+  imageUrl?: string;
   repositoryUrl: string;
   liveUrl?: string;
   stacks: string[];
-  color: string;
 };
 
 export const projects: ProjectsProps[] = [
   {
     id: 1,
     title: "Trabalhos Artesanais",
+    description:
+      "Criei o Trabalhos Artesanais com a finalidade de otimizar a gestão de vendas, funcionando como um caderno online. Os usuários podem cadastrar seus trabalhos de maneira intuitiva, permitindo um controle mais eficiente e um histórico completo das suas vendas.",
     imageUrl: "/assets/trabalhos-artesanais.png",
     repositoryUrl: "https://github.com/jessicasantosb/trabalhos-artesanais",
     liveUrl: "https://trabalhos-artesanais.vercel.app/",
     stacks: ["react", "typescript", "firebase", "tailwind", "jest", "eslint"],
-    color:
-      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(216,216,216,1) 35%)",
   },
   {
     id: 2,
     title: "Booking Room",
+    description:
+      "Desenvolvi o Booking Room para gerenciar o aluguel de quartos. O sistema é projetado para oferecer uma experiência simples e eficiente tanto para administradores quanto para usuários.",
     imageUrl: "/assets/booking-room.png",
     repositoryUrl: "https://github.com/jessicasantosb/booking-room",
     liveUrl: "https://booking-room-jessicasantosb.vercel.app/",
     stacks: ["react", "javascript", "sass", "stripe", "nodejs"],
-    color:
-      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(194,194,194,1) 30%)",
   },
   {
     id: 3,
     title: "Entregas e Fretes",
+    description:
+      "Entregas e Fretes é um projeto freelance criado para promover serviços de entregas, esclarecer dúvidas e facilitar o contato com os clientes, oferecendo uma comunicação simples e eficiente.",
     imageUrl: "/assets/entregas-e-fretes.png",
     repositoryUrl:
       "https://github.com/jessicasantosb/freelance-entregas-e-fretes",
@@ -45,13 +47,12 @@ export const projects: ProjectsProps[] = [
       "zod",
       "zustand",
     ],
-    color:
-      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(216,216,216,1) 35%)",
   },
   {
     id: 4,
     title: "E-commerce",
-    imageUrl: "/assets/e-commerce.png",
+    description:
+      "Estou desenvolvendo este e-commerce fullstack com o objetivo de aprimorar minhas habilidades na criação de aplicações robustas e completas.",
     repositoryUrl: "https://github.com/jessicasantosb/e-commerce",
     stacks: [
       "nextjs",
@@ -64,7 +65,5 @@ export const projects: ProjectsProps[] = [
       "prisma",
       "cloudinary",
     ],
-    color:
-      "linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(194,194,194,1) 30%)",
   },
 ];
