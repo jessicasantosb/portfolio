@@ -1,14 +1,13 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
 import { useRef } from "react";
-import { CiGlobe, CiImageOff } from "react-icons/ci";
-import { IoIosCode } from "react-icons/io";
+import { CiImageOff } from "react-icons/ci";
 
+import { CardLinks } from "./card-links";
 import { Icons } from "./icons";
 
-type CardProps = {
+export type CardProps = {
   i: number;
   title: string;
   description: string;
@@ -67,26 +66,7 @@ export const Card: React.FC<CardProps> = ({
 
           <Icons stacks={stacks} />
 
-          <div className="py-4 flex items-center justify-center gap-4 text-lg select-none">
-            <Link
-              href={repositoryUrl}
-              target="_blank"
-              className="w-40 p-1 flex gap-2 items-center justify-center text-slate-600 shadow-md hover:opacity-80 hover:shadow-none hover:scale-95"
-            >
-              <IoIosCode />
-              Veja o Código
-            </Link>
-            {liveUrl && (
-              <Link
-                href={liveUrl}
-                target="_blank"
-                className="w-40 p-1 flex gap-2 items-center justify-center bg-[#d9bae6] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
-              >
-                <CiGlobe />
-                Confira Online
-              </Link>
-            )}
-          </div>
+          <CardLinks repositoryUrl={repositoryUrl} liveUrl={liveUrl} />
         </div>
 
         <div className="hidden md:block w-full h-full justify-self-end mt-4 md:m-0 overflow-hidden select-none">
