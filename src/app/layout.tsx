@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`min-h-dvh w-full flex flex-col justify-between ${josefinSans.className}`}
+        className={`h-dvh min-h-dvh w-full flex flex-col justify-between ${josefinSans.className}`}
       >
         <Header />
         {children}
