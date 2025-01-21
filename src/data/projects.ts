@@ -31,13 +31,13 @@ export const projects: ProjectsProps[] = [
   },
   {
     id: 3,
-    title: "Entregas e Fretes",
+    title: "Barbosa Transportes",
     description:
-      "Entregas e Fretes é um projeto freelance criado para promover serviços de entregas, esclarecer dúvidas e facilitar o contato com os clientes, oferecendo uma comunicação simples e eficiente.",
-    imageUrl: "/assets/entregas-e-fretes.png",
+      "Barbosa Transportes foi projetado para promover os serviços oferecidos, incluindo um formulário que conecta diretamente ao WhatsApp, facilitando a comunicação, ampliando a transparência e ajudando a atrair novos clientes.",
+    imageUrl: "/assets/barbosa-transportes.png",
     repositoryUrl:
-      "https://github.com/jessicasantosb/freelance-entregas-e-fretes",
-    liveUrl: "https://barbosa-fretes.vercel.app/",
+      "https://github.com/jessicasantosb/freelance-barbosa-transportes",
+    liveUrl: "https://barbosa-transportes.vercel.app/",
     stacks: [
       "nextjs",
       "typescript",
