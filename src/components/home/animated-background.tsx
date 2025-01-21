@@ -68,7 +68,7 @@ export const AnimatedBackground: React.FC = () => {
   }, [color.background, color.cube]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-dvh overflow-hidden">
       <canvas ref={canvasRef} className="absolute top-0 left-0 h-full"></canvas>
     </div>
   );
