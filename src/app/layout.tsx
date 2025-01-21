@@ -9,7 +9,6 @@ const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
 });
 
-
 export const metadata: Metadata = {
   title: {
     default: "JESSICA BANDEIRA",
@@ -30,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`w-full flex flex-col justify-between ${josefinSans.className}`}
+        className={`w-full h-screen flex flex-col ${josefinSans.className}`}
       >
         <Header />
-        {children}
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>
