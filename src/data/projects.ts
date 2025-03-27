@@ -50,10 +50,11 @@ export const projects: ProjectsProps[] = [
   },
   {
     id: 4,
-    title: "E-commerce",
+    title: "E-commerce Admin Dashboard",
     description:
-      "Estou desenvolvendo este e-commerce fullstack com o objetivo de aprimorar minhas habilidades na criação de aplicações robustas e completas.",
-    repositoryUrl: "https://github.com/jessicasantosb/e-commerce",
+      "Com CMS E-commerce Admin aprendi a implementar as funcionalidades essenciais para gerenciar conteúdos e operações de um e-commerce de forma eficiente.",
+    repositoryUrl: "https://github.com/jessicasantosb/ecommerce-admin",
+    liveUrl: "https://ecommerce-admin-jessicasantosb.vercel.app/",
     stacks: [
       "nextjs",
       "typescript",
@@ -64,6 +65,16 @@ export const projects: ProjectsProps[] = [
       "zustand",
       "prisma",
       "cloudinary",
+      "stripe",
     ],
+  },
+  {
+    id: 5,
+    title: "E-commerce",
+    description:
+      "O projeto E-commerce serviu para integrar com a API desenvolvida no CMS E-commerce Admin, proporcionando uma conexão eficiente entre a administração e a loja online.",
+    repositoryUrl: "https://github.com/jessicasantosb/ecommerce-store",
+    liveUrl: "https://ecommerce-store-jessicasantosb.vercel.app/",
+    stacks: ["nextjs", "typescript", "zustand"],
   },
 ];
