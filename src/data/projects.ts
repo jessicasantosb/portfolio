@@ -52,7 +52,8 @@ export const projects: ProjectsProps[] = [
     id: 4,
     title: "E-commerce Admin Dashboard",
     description:
-      "Com CMS E-commerce Admin aprendi a implementar as funcionalidades essenciais para gerenciar conteúdos e operações de um e-commerce de forma eficiente.",
+      "Com o CMS E-commerce Admin aprendi a implementar as funcionalidades essenciais para gerenciar conteúdos e operações de um e-commerce de forma eficiente.",
+    imageUrl: "/assets/e-commerce-admin.png",
     repositoryUrl: "https://github.com/jessicasantosb/ecommerce-admin",
     liveUrl: "https://ecommerce-admin-jessicasantosb.vercel.app/",
     stacks: [
@@ -73,6 +74,7 @@ export const projects: ProjectsProps[] = [
     title: "E-commerce",
     description:
       "O projeto E-commerce serviu para integrar com a API desenvolvida no CMS E-commerce Admin, proporcionando uma conexão eficiente entre a administração e a loja online.",
+    imageUrl: "/assets/e-commerce.png",
     repositoryUrl: "https://github.com/jessicasantosb/ecommerce-store",
     liveUrl: "https://ecommerce-store-jessicasantosb.vercel.app/",
     stacks: ["nextjs", "typescript", "zustand"],
