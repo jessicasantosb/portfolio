@@ -21,13 +21,21 @@ export const projects: ProjectsProps[] = [
   },
   {
     id: 2,
-    title: "Booking Room",
+    title: "Valdir Eletricista",
     description:
-      "Desenvolvi o Booking Room para gerenciar o aluguel de quartos. O sistema é projetado para oferecer uma experiência simples e eficiente tanto para administradores quanto para usuários.",
-    imageUrl: "/assets/booking-room.png",
-    repositoryUrl: "https://github.com/jessicasantosb/booking-room",
-    liveUrl: "https://booking-room-jessicasantosb.vercel.app/",
-    stacks: ["react", "javascript", "sass", "stripe", "nodejs"],
+      "Desenvolvi para destacar os serviços disponíveis, o sistema inclui um formulário integrado ao WhatsApp, agilizando o contato, aumentando a transparência e impulsionando a captação de clientes.",
+    imageUrl: "/assets/eletricista.png",
+    repositoryUrl: "https://github.com/jessicasantosb/freelance-eletricista",
+    liveUrl: "https://valdir-eletricista.vercel.app/",
+    stacks: [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "react-hook-form",
+      "zod",
+      "zustand",
+    ],
   },
   {
     id: 3,
@@ -78,5 +86,23 @@ export const projects: ProjectsProps[] = [
     repositoryUrl: "https://github.com/jessicasantosb/ecommerce-store",
     liveUrl: "https://ecommerce-store-jessicasantosb.vercel.app/",
     stacks: ["nextjs", "typescript", "zustand"],
+  },
+  {
+    id: 6,
+    title: "Zarpou Viagens e Turismo",
+    description:
+      "Projeto desenvolvido para suprir a necessidade de centralizar a divulgação de serviços da Zarpou Viagens e Turismo. O app organiza informações de pacotes e conecta clientes diretamente à operadora online, eliminando atritos no primeiro contato.",
+    imageUrl: "/assets/zarpou.png",
+    repositoryUrl: "https://github.com/jessicasantosb/freelance-zarpou",
+    liveUrl: "https://freelance-zarpou.vercel.app/",
+    stacks: [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "react-hook-form",
+      "zod",
+      "zustand",
+    ],
   },
 ];
