@@ -17,10 +17,5 @@ export const contactLinks: ContactLinkItem[] = [
     href: `https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USER}`,
     name: "Linkedin",
   },
-  {
-    href: `https://www.youtube.com/@${process.env.NEXT_PUBLIC_YOUTUBE_USER}`,
-    name: "Youtube",
-  },
   { href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}`, name: "Email" },
-  { href: `https://x.com/${process.env.NEXT_PUBLIC_X_USER}`, name: "X" },
 ];
