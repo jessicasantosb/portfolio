@@ -11,7 +11,7 @@ export function CardLinks({ repositoryUrl, liveUrl }: CardLinksProps) {
       <Link
         href={repositoryUrl}
         target="_blank"
-        className="w-40 h-10 p-2 tracking-tighter flex gap-2 justify-center text-slate-600 shadow-md hover:opacity-80 hover:shadow-none hover:scale-95"
+        className="w-40 h-10 p-2 tracking-tighter flex gap-2 justify-center items-center text-slate-600 shadow-md hover:opacity-80 hover:shadow-none hover:scale-95"
       >
         <IoIosCode size={24} />
         Veja o Código
@@ -21,7 +21,7 @@ export function CardLinks({ repositoryUrl, liveUrl }: CardLinksProps) {
         <Link
           href={liveUrl}
           target="_blank"
-          className="w-40 h-10 p-2 tracking-tighter border flex gap-2 justify-center bg-[#d9bae6] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
+          className="w-40 h-10 p-2 tracking-tighter border flex gap-2 justify-center items-center bg-[#d9bae6] shadow hover:opacity-80 hover:shadow-none hover:scale-95"
         >
           <CiGlobe size={24} />
           Confira Online

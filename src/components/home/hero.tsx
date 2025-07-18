@@ -12,7 +12,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={pVariants}
-            className="max-w-[25rem] pt-2 pb-4 sm:p-0 lg:-mt-4 lg:w-64 text-[0.7em] font-light tracking-wide leading-4"
+            className="max-w-[25rem] lg:w-[20rem] text-[0.90rem] sm:text-[1rem] font-light tracking-wide leading-5 sm:leading-[1.15rem]"
           >
             Olá! Sou uma <span className="italic">desenvolvedora Web</span>{" "}
             especializada em{" "}

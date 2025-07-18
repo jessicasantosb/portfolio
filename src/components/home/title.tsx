@@ -30,7 +30,7 @@ export function HomeTitle({ dir, ...props }: HomeTitleProps) {
       custom={dir}
       variants={titleVariants}
       {...props}
-      className="text-[8vh] md:text-[7vw] uppercase tracking-[-7px] md:text-nowrap leading-none sm:leading-normal "
+      className="text-[4rem] md:text-[6rem] uppercase tracking-tighter md:tracking-tight leading-[4.75rem] sm:leading-normal "
     />
   );
 }
