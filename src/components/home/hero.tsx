@@ -7,12 +7,12 @@ export function Hero() {
     <>
       <div className="flex justify-center flex-col lg:flex-row lg:items-center lg:gap-8">
         <HomeTitle dir="-100%">Jéssica Bandeira</HomeTitle>
-        <div className="overflow-hidden py-1 md:py-4">
+        <div className="overflow-hidden md:-mt-3">
           <MotionP
             initial="hidden"
             animate="visible"
             variants={pVariants}
-            className="max-w-[25rem] lg:w-[20rem] text-[0.90rem] sm:text-[1rem] font-light tracking-wide leading-5 sm:leading-[1.15rem]"
+            className="max-w-[25rem] lg:w-[20rem] text-[0.90rem] sm:text-[1rem] font-light tracking-wide leading-5 sm:leading-[1.18rem]"
           >
             Olá! Sou uma <span className="italic">desenvolvedora Web</span>{" "}
             especializada em{" "}
