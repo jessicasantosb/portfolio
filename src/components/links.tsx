@@ -5,7 +5,7 @@ import { MotionDiv } from "./shared/motion";
 
 export const RevealLinks = () => {
   return (
-    <section className="w-full grid place-content-center gap-4 sm:gap-2">
+    <section className="w-full mt-10 sm:mt-0 grid place-content-center gap-4 sm:gap-2">
       {contactLinks.map(({ href, name }, index) => (
         <MotionDiv
           key={name}
