@@ -1,21 +1,20 @@
-import { ContactLinkItem } from "@/types/contact-links";
+import type { ContactLinkItem } from "@/types/contact-links";
 
 export const contactLinks: ContactLinkItem[] = [
   {
-    href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`,
-    name: "Whatsapp",
+    href: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER || "jessicasantosb"}`,
+    name: "GitHub",
   },
   {
-    href: `https://discordapp.com/users/${process.env.NEXT_PUBLIC_DISCORD_USER}`,
-    name: "Discord",
+    href: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+      ? `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`
+      : undefined,
+    name: "WhatsApp",
   },
   {
-    href: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER}`,
-    name: "Github",
+    href: process.env.NEXT_PUBLIC_LINKEDIN_USER
+      ? `https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USER}`
+      : undefined,
+    name: "LinkedIn",
   },
-  {
-    href: `https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USER}`,
-    name: "Linkedin",
-  },
-  { href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}`, name: "Email" },
 ];

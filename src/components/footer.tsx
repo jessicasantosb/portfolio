@@ -1,8 +1,16 @@
-export function Footer() {
+import Link from "next/link";
+import { localizePath, type Dictionary, type Locale } from "@/i18n/dictionaries";
+
+export function Footer({ locale, copy }: { locale: Locale; copy: Dictionary["footer"] }) {
   return (
-    <footer className="w-full p-6 flex flex-col md:flex-row md:gap-2 justify-end [&>*]:block font-light text-right text-gray-400 bg-[#f0f0f0] select-none">
-      <p>Todos os direitos reservados.</p>
-        <p> Desenvolvido por &copy; Jessica</p>
+    <footer className="site-footer">
+      <div className="page-wrap footer-inner">
+        <Link href={localizePath(locale, "/")} className="footer-brand">
+          J<span>.</span>
+        </Link>
+        <p>{copy.madeWith}</p>
+        <p>© {new Date().getFullYear()} · {copy.country}</p>
+      </div>
     </footer>
   );
 }

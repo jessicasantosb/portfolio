@@ -1,4 +1,4 @@
 export type ContactLinkItem = {
-  href: string;
+  href?: string;
   name: string;
 };
